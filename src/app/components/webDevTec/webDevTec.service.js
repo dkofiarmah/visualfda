@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-      .module('testingTravisIntegration')
+      .module('fdaAppPrototype')
       .service('webDevTec', webDevTec);
 
   /** @ngInject */

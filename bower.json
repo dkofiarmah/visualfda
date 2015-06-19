@@ -1,5 +1,5 @@
 {
-  "name": "testingTravisIntegration",
+  "name": "fdaAppPrototype",
   "version": "0.0.0",
   "dependencies": {
     "angular-animate": "~1.4.0",

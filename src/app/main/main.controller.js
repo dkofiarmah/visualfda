@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('testingTravisIntegration')
+    .module('fdaAppPrototype')
     .controller('MainController', MainController);
 
   /** @ngInject */
@@ -11,7 +11,7 @@
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
-    vm.creationDate = 1434690234806;
+    vm.creationDate = 1434750136273;
     vm.showToastr = showToastr;
 
     activate();
