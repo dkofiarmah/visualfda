@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/cepinos/testing-travis-integration.svg?branch=master)](https://travis-ci.org/cepinos/testing-travis-integration)
 
+Description: Write a brief description, no greater than 750 words, of the approach used to create the working prototype and place this description in the README.md file located in the root directory of your repository.
+
 - assigned one leader, gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted
 - assembled a multidisciplinary and collaborative team that includes at a minimum two of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C. The quoter’s proposed mix of labor categories and level of effort for its working prototype, as reflected in Attachment C, shall be evaluated to assess the quoter’s understanding and capability to supply agile delivery services
 - used at least five modern and open-source technologies, regardless of architectural layer (frontend, backend etc)
