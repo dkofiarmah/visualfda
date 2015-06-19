@@ -13,6 +13,10 @@ exports.config = {
     'browserName': 'chrome'
   },
 
+  // Adding sauselabs capabilities for chrome testing.
+  sauceUser: process.env.SAUCE_USERNAME,
+  sauceKey: process.env.SAUCE_ACCESS_KEY,
+
   // Spec patterns are relative to the current working directly when
   // protractor is called.
   specs: [paths.e2e + '/**/*.js'],
