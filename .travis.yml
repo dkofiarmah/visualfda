@@ -14,6 +14,7 @@ before_script:
 - npm install -g bower
 - bower install
 - npm install -g gulp
+- curl https://raw.githubusercontent.com/cepinos/FDA-app-prototype/master/scripts/sauce_connect_setup.sh | bash
 env:
   global:
   - secure: vQQgD58xfSzMvEkHbguKCe4fmOE/mGxfJqwQFlweuPV43o1MCZ3J/QVjEzFIyKMoQhPS/x2tcFVo9VKZJB/bRSib2xINCJD8FeR8ikHVTHKFN5G0K6Ifv4rFdykqf/HDnsC+E+fB1jkLlmNC/qISIV2ne2hxFJx2qY0fh0KBGqr3wprDme9vWCoWUm0Rnri9hMEMA3zelu5mq8cheHNvSZWeyMRq2DTxkBAsOcF43rQthbHpuX3vc1+b68MtosFhEkCnzgeAi+0qggBSvVbJBh1z/WKkk1VP7t9ATq9zVKk0+8dhBapSPc/k/V243JHsz7w1pnA2YEynCRABYRe7K/ZzWE5675b5q2LsU9Rul7jITJD0HWpJrCfKY7HdO3qpFWwRjNRfkUk2HHmny35ultTmOEqTGhfvnGV+KidqM6EhthmVnyVmMk66sdW09uyuzkvwr285ipabieQX9ySVwsNagEg5r5R6XozvQ7VOxAFNxEQVmB1EgWFnMgqedwz0q1v9INafT3dzOuuTH/nX4VFH5fy6BQ27YdBmiRp1Qbmt7+pAoEU568g8seqmoRb60YzB6/TAXbO7rozW77SdLRLCxr3GIetlaaMSlQK7njsPK7vqjVkZr6krVDRt6i6lA1N6OxfLYUisfakW6sr+W/hMNe2lqO/3mDwubI75l4E=
