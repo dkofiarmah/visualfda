@@ -6,9 +6,12 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($log, $timeout, webDevTec, toastr, openFDA) {
     var vm = this;
 
+    vm.openFDA = openFDA.getContributors().then(function(data){
+      $log.debug('OpenFDA response', data);
+    });
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1434750136273;
