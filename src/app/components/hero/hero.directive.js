@@ -3,16 +3,24 @@
 (function(){
   'use strict';
   angular.module('fdaAppPrototype')
-    .controller('HeroCtrl', HeroCtrl);
+    .directive('alHero', alHero);
 
   /** @ngInject */
-  function HeroCtrl($interval) {
-    var hero = this,
-    maximum = document.getElementById('container').clientWidth / 2 || 300;
+  function alHero(){
+    var directive = {
+      restrict: 'E',
+      templateUrl: 'app/components/hero/hero.html',
+      controller: heroCtrl,
+    };
+    return directive;
+  }
 
-    hero.data = [[]];
-    hero.labels = [];
-    hero.options = {
+  /** @ngInject */
+  function heroCtrl($scope, $interval) {
+    var maximum = angular.element('al-hero').clientWidth / 2 || 300;
+    $scope.data = [[]];
+    $scope.labels = [];
+    $scope.options = {
       animation: false,
       showScale: false,
       showTooltips: false,
@@ -26,15 +34,14 @@
     }, 40);
 
     function getLiveChartData () {
-      console.log("hero.data", hero.data);
-      if (hero.data[0].length) {
-        hero.labels = hero.labels.slice(1);
-        hero.data[0] = hero.data[0].slice(1);
+      if ($scope.data[0].length) {
+        $scope.labels = $scope.labels.slice(1);
+        $scope.data[0] = $scope.data[0].slice(1);
       }
 
-      while (hero.data[0].length < maximum) {
-        hero.labels.push('');
-        hero.data[0].push(getRandomValue(hero.data[0]));
+      while ($scope.data[0].length < maximum) {
+        $scope.labels.push('');
+        $scope.data[0].push(getRandomValue($scope.data[0]));
       }
     }
   }

@@ -3,10 +3,10 @@
 
   angular
     .module('fdaAppPrototype')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('alNavbar', alNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function alNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
