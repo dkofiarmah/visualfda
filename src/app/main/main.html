@@ -1,8 +1,13 @@
+<div>
+  <acme-navbar />
+</div>
+
+<div ng-controller="HeroCtrl as hero">
+  <canvas width='1200' height='300' class="chart chart-line chart-xl" data="hero.data" options="hero.options" labels="labels"></canvas>
+</div>
+
 <div class="container">
 
-  <div>
-    <acme-navbar creationDate="main.creationDate" />
-  </div>
 
   <div class="jumbotron text-center">
     <h1>'Allo, 'Allo!</h1>

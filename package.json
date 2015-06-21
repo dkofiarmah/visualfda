@@ -7,7 +7,7 @@
     "morgan": "^1.6.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "gulp test",
     "postinstall": "bower install && gulp build"
   },
