@@ -3,7 +3,7 @@ VisualFDA
 
 [![Build Status](https://travis-ci.org/cepinos/FDA-app-prototype.svg?branch=master)](https://travis-ci.org/cepinos/FDA-app-prototype)
 
-Create charts from openFDA API, We make easy it.
+VisualFDA Creates charts from openFDA API easily.
 
 Demo Site
 ---------
