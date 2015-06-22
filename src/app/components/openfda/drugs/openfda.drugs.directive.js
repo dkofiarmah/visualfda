@@ -23,7 +23,7 @@
     var vm = this;
     vm.data = [[]];
     vm.labels = [];
-    vm.series = [];
+    vm.series = ['patient.reaction.reactionmeddrapt'];
     vm.field = 'patient.reaction.reactionmeddrapt';
     vm.limit = 10;
     vm.fields = [
