@@ -6,6 +6,11 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {
+  function MainController(openFDAService) {
+    var main = this;
+
+    openFDAService.status().$promise.then(function(data){
+      console.log(data);
+    });
   }
 })();
