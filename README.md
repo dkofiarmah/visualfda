@@ -47,13 +47,13 @@ System Used for Continuos Integration
 Installation
 ------------
 ```
-npm install && npm bower install
+npm install && bower install
 ```
 For development run:
 ```
 gulp serve
 ```
-To create a distribution version. it will create the folder 'dist' inside your instance:
+To create a distribution version run the next command. It will create a folder 'dist' inside your instance, with all files optimized for deployment:
 ```
 gulp build
 ```
