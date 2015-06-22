@@ -10,17 +10,22 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/hero/hero.html',
+      transclude: false,
       controller: heroCtrl,
+      controllerAs: 'heroCtrl',
+      bindToController: false,
     };
     return directive;
   }
 
   /** @ngInject */
-  function heroCtrl($scope, $interval) {
-    var maximum = angular.element('al-hero').clientWidth / 2 || 300;
-    $scope.data = [[]];
-    $scope.labels = [];
-    $scope.options = {
+  function heroCtrl($interval) {
+    var maximum = angular.element('al-hero').clientWidth / 2 || 300,
+    vm = this;
+
+    vm.data = [[]];
+    vm.labels = [];
+    vm.options = {
       animation: false,
       showScale: false,
       showTooltips: false,
@@ -34,14 +39,14 @@
     }, 40);
 
     function getLiveChartData () {
-      if ($scope.data[0].length) {
-        $scope.labels = $scope.labels.slice(1);
-        $scope.data[0] = $scope.data[0].slice(1);
+      if (vm.data[0].length) {
+        vm.labels = vm.labels.slice(1);
+        vm.data[0] = vm.data[0].slice(1);
       }
 
-      while ($scope.data[0].length < maximum) {
-        $scope.labels.push('');
-        $scope.data[0].push(getRandomValue($scope.data[0]));
+      while (vm.data[0].length < maximum) {
+        vm.labels.push('');
+        vm.data[0].push(getRandomValue(vm.data[0]));
       }
     }
   }
