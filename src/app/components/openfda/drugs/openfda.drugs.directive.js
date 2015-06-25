@@ -35,8 +35,24 @@
         field: 'sender.senderorganization'
       },
       {
-        name: 'patient.reaction.reactionmeddrapt',
+        name: 'Patient reaction',
         field: 'patient.reaction.reactionmeddrapt'
+      },
+      {
+        name: 'Patient age',
+        field: 'patient.patientonsetage'
+      },
+      {
+        name: 'Product',
+        field: 'patient.drug.medicinalproduct'
+      },
+      {
+        name: 'Manufacture Name',
+        field: 'patient.drug.openfda.manufacturer_name'
+      },
+      {
+        name: 'Brand Name',
+        field: 'patient.drug.openfda.brand_name'
       },
     ];
 
