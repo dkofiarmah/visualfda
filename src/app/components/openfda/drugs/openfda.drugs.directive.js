@@ -23,12 +23,13 @@
     var vm = this;
     vm.data = [[]];
     vm.labels = [];
-    vm.series = ['patient.reaction.reactionmeddrapt'];
+    vm.series = undefined;
     vm.field = {
         name: 'Patient reaction',
         field: 'patient.reaction.reactionmeddrapt'
     };
     vm.limit = 10;
+    vm.filter = '';
     vm.fields = [
       {
         name: 'Sender organization',
@@ -65,6 +66,9 @@
       }
       if(vm.limit){
         params['limit'] = vm.limit;
+      }
+      if(vm.filter){
+        params['search'] = vm.filter;
       }
       openFDADrugsEvents.get(params, function(response){
         var labels = [];
