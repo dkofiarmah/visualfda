@@ -1,7 +1,7 @@
 VisualFDA
 =========
 
-[![Build Status](https://travis-ci.org/cepinos/FDA-app-prototype.svg?branch=master)](https://travis-ci.org/cepinos/FDA-app-prototype)
+[![Build Status](https://travis-ci.org/inqbation/visualfda.svg?branch=master)](https://travis-ci.org/inqbation/visualfda)
 
 VisualFDA Creates charts from openFDA API easily.
 
