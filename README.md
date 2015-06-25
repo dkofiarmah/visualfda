@@ -3,7 +3,7 @@ VisualFDA
 
 [![Build Status](https://travis-ci.org/cepinos/FDA-app-prototype.svg?branch=master)](https://travis-ci.org/cepinos/FDA-app-prototype)
 
-Create charts from openFDA API, We make easy it.
+VisualFDA Creates charts from openFDA API easily.
 
 Demo Site
 ---------
@@ -47,13 +47,13 @@ System Used for Continuos Integration
 Installation
 ------------
 ```
-npm install && npm bower install
+npm install && bower install
 ```
 For development run:
 ```
 gulp serve
 ```
-To create a distribution version. it will create the folder 'dist' inside your instance:
+To create a distribution version run the next command. It will create a folder 'dist' inside your instance, with all files optimized for deployment:
 ```
 gulp build
 ```
