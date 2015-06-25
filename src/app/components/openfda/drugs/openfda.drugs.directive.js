@@ -24,11 +24,14 @@
     vm.data = [[]];
     vm.labels = [];
     vm.series = ['patient.reaction.reactionmeddrapt'];
-    vm.field = 'patient.reaction.reactionmeddrapt';
+    vm.field = {
+        name: 'Patient reaction',
+        field: 'patient.reaction.reactionmeddrapt'
+    };
     vm.limit = 10;
     vm.fields = [
       {
-        name: 'sender.senderorganization',
+        name: 'Sender organization',
         field: 'sender.senderorganization'
       },
       {
@@ -40,10 +43,9 @@
 
 
     var draw = function(){
-      console.log("jaja");
       var params = {};
       if(vm.field){
-        params['count'] = vm.field;
+        params['count'] = vm.field.field;
       }
       if(vm.limit){
         params['limit'] = vm.limit;
@@ -62,7 +64,7 @@
       });
     };
 
-    $scope.$watch('[field, filter, limit]', draw, true);
+    $scope.$watch('[drugEvent.field, drugEvent.filter, drugEvent.limit]', draw, true);
 
 
   }
