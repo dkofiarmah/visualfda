@@ -57,7 +57,7 @@ To create a distribution version run the next command. It will create a folder '
 ```
 gulp build
 ```
-Installation development instance with Docker
+Installation with Docker
 ---------------------------------------------
 
 Clone this repository:
@@ -74,17 +74,17 @@ Install docker following these instructions:
 
 Install Node Dependencies
 ```
-docker run -rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node npm install
+docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node npm install
 ```
 
 Install Bower Components
 ```
-docker run -rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node bower install --allow-root
+docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node bower install --allow-root
 ```
 
 Run the development server, and then open http://localhost:3000
 ```
-docker run -rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node gulp serve
+docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node gulp serve
 ```
 
 - set up or used configuration management

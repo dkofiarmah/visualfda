@@ -36,6 +36,12 @@ ENV PATH $PATH:/root/.nvm/versions/node/$NODE_VER/bin
 
 RUN npm install bower gulp -g
 
+# installing phanthonjs
+
+RUN apt-get install -y bzip2 libfreetype6 libfontconfig
+RUN curl -sSL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOM_JS_VERSION.tar.bz2 | tar xjC /
+RUN ln -s phantomjs-$PHANTOM_JS_VERSION /phantomjs
+
 # Adding source files
 ADD ./package.json /home/
 ADD ./bower.json /home/
@@ -47,4 +53,4 @@ ADD . /home
 WORKDIR /home
 
 # Expose gulp ports
-EXPOSE 3000 3001
+EXPOSE 3000 3001 9876
