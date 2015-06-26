@@ -65,9 +65,19 @@ Install docker following these instructions:
 - Ubuntu: Follow this instructions https://docs.docker.com/installation/ubuntulinux/.
 - There is a set of instructions on how to install Docker in each operative system here: https://docs.docker.com/
 
+Install Node Dependencies
+```
+docker run -rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node npm install
+```
+
+Install Bower Components
+```
+docker run -rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node bower install --allow-root
+```
+
 Run the development server, and then open http://localhost:3000
 ```
-docker run -p 3000:3000 -t -i inqbation/node gulp serve
+docker run -rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node gulp serve
 ```
 
 - set up or used configuration management
