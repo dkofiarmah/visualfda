@@ -62,13 +62,13 @@
     var draw = function(){
       var params = {};
       if(vm.field){
-        params['count'] = vm.field.field;
+        params.count = vm.field.field;
       }
       if(vm.limit){
-        params['limit'] = vm.limit;
+        params.limit = vm.limit;
       }
       if(vm.filter){
-        params['search'] = vm.filter;
+        params.search = vm.filter;
       }
       openFDADrugsEvents.get(params, function(response){
         var labels = [];
@@ -76,11 +76,11 @@
         for (var i = 0; i < response.results.length; i++) {
           labels.push(response.results[i].term);
           data.push(response.results[i].count);
-        };
-          vm.data = [
-            data
-          ];
-          vm.labels = labels;
+        }
+        vm.data = [
+          data
+        ];
+        vm.labels = labels;
       });
     };
 

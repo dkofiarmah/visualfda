@@ -10,7 +10,7 @@
     function openFDAService(openFDASettings, URI, $log, $resource){
       var settings = openFDASettings;
 
-      this.url = function(resource, type, parameters){
+      this.url = function(resource, type){
         if(typeof resource === 'undefined' || typeof type === 'undefined'){
           $log.error('resource and type are required');
         }
@@ -27,7 +27,7 @@
         var url = new URI(settings.baseURL);
         url.filename(settings.status);
         return url.toString();
-      }
+      };
 
       this.status = function(){
         var url = this.statusURL();
