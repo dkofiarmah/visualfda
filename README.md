@@ -57,6 +57,18 @@ To create a distribution version run the next command. It will create a folder '
 ```
 gulp build
 ```
+Installation development instance with Docker
+---------------------------------------------
+Install docker following these instructions:
+- OSX: Download and install the current version. https://github.com/boot2docker/osx-installer/releases/tag/v1.7.0, Download Boot2Docker by clicking Boot2Docker-x.x.x.pkg in the “Downloads” section.
+- Windows: Follow this instructions https://docs.docker.com/installation/windows/.
+- Ubuntu: Follow this instructions https://docs.docker.com/installation/ubuntulinux/.
+- There is a set of instructions on how to install Docker in each operative system here: https://docs.docker.com/
+
+Run the development server, and then open http://localhost:3000
+```
+docker run -p 3000:3000 -t -i inqbation/node gulp serve
+```
 
 - set up or used configuration management
 - set up or used continuous monitoring
