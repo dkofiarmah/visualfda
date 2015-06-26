@@ -59,6 +59,13 @@ gulp build
 ```
 Installation development instance with Docker
 ---------------------------------------------
+
+Clone this repository:
+```
+git clone git@github.com:inqbation/visualfda.git
+cd visualfda
+```
+
 Install docker following these instructions:
 - OSX: Download and install the current version. https://github.com/boot2docker/osx-installer/releases/tag/v1.7.0, Download Boot2Docker by clicking Boot2Docker-x.x.x.pkg in the “Downloads” section.
 - Windows: Follow this instructions https://docs.docker.com/installation/windows/.
