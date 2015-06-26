@@ -31,12 +31,17 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh
     && nvm alias default $NODE_VER \
     && nvm use default
 
-# Adding source files
-ADD . /home
-
+# Adding npm and node to PATH
 ENV PATH $PATH:/root/.nvm/versions/node/$NODE_VER/bin
 
-RUN cd /home; npm install && npm install bower gulp -g && bower install --allow-root
+RUN npm install bower gulp -g
+
+# Adding source files
+ADD ./package.json /home/
+ADD ./bower.json /home/
+ADD ./.bowerrc /home/
+RUN cd /home; npm install && bower install --allow-root
+ADD . /home
 
 # Define working directory.
 WORKDIR /home
