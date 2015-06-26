@@ -87,6 +87,11 @@ Run the development server, and then open http://localhost:3000
 docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node gulp serve
 ```
 
+Run unit testings
+```
+docker run --rm -v "$(pwd)":/home -p 9876:9876 -t -i inqbation/node gulp test
+```
+
 - set up or used configuration management
 - set up or used continuous monitoring
 - deploy their software in a container (i.e., utilized operating-system-level virtualization)
