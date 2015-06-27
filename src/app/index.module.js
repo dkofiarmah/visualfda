@@ -10,8 +10,8 @@
       'ngSanitize',
       'openFDA',
       'ui.router',
-      'ui.bootstrap',
-      'chart.js'
+      'chart.js',
+      'ngMaterial',
     ]);
 
 })();
