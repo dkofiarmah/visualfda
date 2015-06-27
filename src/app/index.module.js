@@ -11,7 +11,6 @@
       'openFDA',
       'ui.router',
       'chart.js',
-      'ngMaterial',
     ]);
 
 })();

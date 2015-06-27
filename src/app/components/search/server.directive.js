@@ -16,8 +16,14 @@
   }
 
   /** @ngInject */
-  function search(openFDADrugsEvents, $scope) {
+  function search(openFDADrugsEvents, $rootScope, Search) {
     var vm = this;
+
+    vm.input;
+
+    vm.submit = function(){
+      $rootScope.$broadcast('search', vm.input);
+    };
   }
 
 })();

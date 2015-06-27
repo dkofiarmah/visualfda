@@ -7,34 +7,39 @@
       <tr>
         <td></td>
         <td>
-          <div data-ng-bind="results.filtered" class="results__table__filtered">7520</div>
+          <div data-ng-bind="drugEvents.filtered" class="results__table__filtered">7520</div>
           <div class="results__table__percentage">
             % of total
-            <span data-ng-bind="results.percentage|percentage"></span>
-            (<span data-ng-bind="results.total"></span>)
+            <span data-ng-bind="drugEvents.percentage|percentage"></span>
+            (<span data-ng-bind="drugEvents.total"></span>)
           </div>
         </td>
         <td>
-          <div data-ng-bind="results.filtered" class="results__table__filtered">7520</div>
+          <div data-ng-bind="drugEvents.filtered" class="results__table__filtered">7520</div>
           <div class="results__table__percentage">
             % of total
-            <span data-ng-bind="results.percentage|percentage"></span>
-            (<span data-ng-bind="results.total"></span>)
+            <span data-ng-bind="drugEvents.percentage|percentage"></span>
+            (<span data-ng-bind="drugEvents.total"></span>)
           </div>
         </td>
       </tr>
-      <tr>
+      <tr ng-repeat="result in drugEvents.data.results">
         <td>
-          1. Nausea
+          {{$index|position}} {{result.term}}
         </td>
         <td>
-          1820
+        {{result.count|number}}
         </td>
         <td>
-          barchar
+          <div>
+            <div al-barchar ng-model="result.count" data-total="drugEvents.filtered"></div>
+          </div>
         </td>
       </tr>
     </tbody>
   </table>
-</div>
+  <div class="text-center">
+    Data provided by the U.S. Food and Drug Administration (<a href="https://open.fda.gov">https://open.fda.gov</a>)
+  </div>
 
+</div>
