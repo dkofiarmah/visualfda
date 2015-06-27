@@ -16,10 +16,11 @@
   }
 
   /** @ngInject */
-  function search(openFDADrugsEvents, $rootScope, Search) {
+  function search(openFDADrugsEvents, $rootScope, SearchAutocompleteData) {
     var vm = this;
 
     vm.input;
+
 
     vm.submit = function(){
       $rootScope.$broadcast('search', vm.input);
