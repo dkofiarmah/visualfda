@@ -7,9 +7,18 @@ from django.core.management.base import BaseCommand, CommandError
 from fda.apps.drugs.models import Drug
 
 class Command(BaseCommand):
-    help = 'Get drugs from open.api.gov'
+    help = 'Get drugs names from open.api.gov and save it on our api'
+
+    def add_arguments(self, parser):
+        parser.add_argument('skip', nargs='+', type=int)
 
     def handle(self, *args, **options):
+        self.limit = 100
+        self.skip = options['skip']
+        self.total = 0
+
+
+
         self.writeln("Getting drugs names")
         self.getdrugs()
         self.writeln("Finished")
@@ -20,9 +29,6 @@ class Command(BaseCommand):
 
     def getdrugs(self):
 
-        self.skip = 0
-        self.limit = 100
-        self.total = 0
         self.field_names = [
             'generic_name',
             'brand_name',
