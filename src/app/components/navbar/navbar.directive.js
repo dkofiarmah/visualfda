@@ -3,10 +3,10 @@
 
   angular
     .module('fdaAppPrototype')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('alNavbar', alNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function alNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
@@ -14,18 +14,14 @@
           creationDate: '='
       },
       controller: NavbarController,
-      controllerAs: 'vm',
-      bindToController: true
+      controllerAs: 'vm'
     };
 
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
-      var vm = this;
+    function NavbarController() {
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
     }
   }
 

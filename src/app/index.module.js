@@ -2,6 +2,16 @@
   'use strict';
 
   angular
-    .module('fdaAppPrototype', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap']);
+    .module('fdaAppPrototype', [
+      // Dependencies
+      'ngAnimate',
+      'ngCookies',
+      'ngTouch',
+      'ngSanitize',
+      'openFDA',
+      'ui.router',
+      'ui.bootstrap',
+      'chart.js'
+    ]);
 
 })();

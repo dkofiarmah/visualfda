@@ -1,11 +1,11 @@
-/* global malarkey:false, toastr:false, moment:false */
 (function() {
   'use strict';
 
   angular
-    .module('fdaAppPrototype')
-    .constant('malarkey', malarkey)
-    .constant('toastr', toastr)
-    .constant('moment', moment);
+    .module('fdaAppPrototype');
+    // Import third party libraries here
+    // e.g .constant('malarkey', malarkey)
+    // e.g .constant('toastr', toastr)
+    // e.g .constant('moment', moment);
 
 })();

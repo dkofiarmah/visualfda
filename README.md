@@ -1,17 +1,97 @@
-# FDA app prototype
+VisualFDA
+=========
 
-[![Build Status](https://travis-ci.org/cepinos/FDA-app-prototype.svg?branch=master)](https://travis-ci.org/cepinos/FDA-app-prototype)
+[![Build Status](https://travis-ci.org/inqbation/visualfda.svg?branch=master)](https://travis-ci.org/inqbation/visualfda)
 
-Description: Write a brief description, no greater than 750 words, of the approach used to create the working prototype and place this description in the README.md file located in the root directory of your repository.
+VisualFDA Creates charts from openFDA API easily.
 
-The README.md file should also make reference to the following for Pool Two Development:
+Demo Site
+---------
+https://visualfda.herokuapp.com
 
-- assigned one leader, gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted
-- assembled a multidisciplinary and collaborative team that includes at a minimum two of the labor categories limited to the Development Pool labor categories to develop the prototype as quoted in Attachment C. The quoter’s proposed mix of labor categories and level of effort for its working prototype, as reflected in Attachment C, shall be evaluated to assess the quoter’s understanding and capability to supply agile delivery services
-- used at least five modern and open-source technologies, regardless of architectural layer (frontend, backend etc)
-- deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider was used
-- wrote unit tests for their code
-- set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider
+Team
+----
+- Project Leader: {name of leader}
+- Agile project manager
+- Technical architect
+- Front end web developer
+- Back end web developer
+- Front end web designer
+
+Technologies used on architectural layer
+----------------------------------------
+- NodeJS
+- AngularJS
+- CSS3
+- HTML5
+- Javascript
+
+Other Technologies used for development.
+----------------------------------------
+- npm
+- bower
+- Yeoman
+- gulp
+- bower
+- Jasmine for Unit testing
+- Karma to run the unit testing.
+
+PaaS Used
+---------
+- This project is been deployed to Heroku.
+
+System Used for Continuos Integration
+-------------------------------------
+- We are using Travis for Continuos Integration and Continuos Deployment.
+
+Installation
+------------
+```
+npm install && bower install
+```
+For development run:
+```
+gulp serve
+```
+To create a distribution version run the next command. It will create a folder 'dist' inside your instance, with all files optimized for deployment:
+```
+gulp build
+```
+Installation with Docker
+---------------------------------------------
+
+Clone this repository:
+```
+git clone git@github.com:inqbation/visualfda.git
+cd visualfda
+```
+
+Install docker following these instructions:
+- OSX: Download and install the current version. https://github.com/boot2docker/osx-installer/releases/tag/v1.7.0, Download Boot2Docker by clicking Boot2Docker-x.x.x.pkg in the “Downloads” section.
+- Windows: Follow this instructions https://docs.docker.com/installation/windows/.
+- Ubuntu: Follow this instructions https://docs.docker.com/installation/ubuntulinux/.
+- There is a set of instructions on how to install Docker in each operative system here: https://docs.docker.com/
+
+Install Node Dependencies
+```
+docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node npm install
+```
+
+Install Bower Components
+```
+docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node bower install --allow-root
+```
+
+Run the development server, and then open http://localhost:3000
+```
+docker run --rm -v "$(pwd)":/home -p 3000:3000 -t -i inqbation/node gulp serve
+```
+
+Run unit testings
+```
+docker run --rm -v "$(pwd)":/home -p 9876:9876 -t -i inqbation/node gulp test
+```
+
 - set up or used configuration management
 - set up or used continuous monitoring
 - deploy their software in a container (i.e., utilized operating-system-level virtualization)
