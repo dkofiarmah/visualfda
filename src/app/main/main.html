@@ -1,33 +1,18 @@
-<div>
-  <al-navbar />
-</div>
-<div>
-  <al-hero />
-</div>
-
 <div class="container">
 
-  <header class="text-center">
-    <h1>
-      VisualFDA
-    </h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure showing FDA charts.
-    </p>
-  </header>
+  <div class="header">
+    <h1 class="header__title">What are the side effects</h1>
+    <div data-al-search></div>
+  </div>
 
   <div class="row">
     <div class="col-sm-12">
-      <br>
-      <br>
-      <br>
       <div class="alert alert-warning">
         openFDA is a beta research project and not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.
       </span></div>
 
       <div>
-        <al-drugs-events />
+        <div data-al-drugs-events></div>
       </div>
     </div>
   </div>
