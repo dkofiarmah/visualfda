@@ -16,12 +16,14 @@
   }
 
   /** @ngInject */
-  function search($scope, $rootScope, $state) {
+  function search($scope, $rootScope, $state, SearchAutocompleteData, $q, $timeout) {
     var vm = this;
     vm.input = '';
 
+    vm.drugs = [];
+
     $scope.$on('searchNotFound',function(){
-      vm.message = 'Oops! We don\'t have that drug. Check your spelling and try agan';
+      vm.searchNotFound = true;
     });
 
     $scope.$on('searchText',function(e, searchText){
@@ -29,16 +31,31 @@
       $rootScope.$broadcast('search', vm.input);
     });
 
-    $scope.$watch('search.input', function(){
-      vm.message = '';
+    $scope.$watch('search.input', function(newInput){
+      vm.searchNotFound = false;
+      vm.drugs = SearchAutocompleteData.get({searchText:newInput});
     });
 
     $scope.$watch('search.loaded', function(){
       $scope.$emit('searchLoaded');
     });
 
-    vm.submit = function(){
+    vm.submit = function(drug){
+      console.log('drug',drug);
+      if(drug){
+        vm.input = drug.name;
+      }
       $state.go('home',{searchText:vm.input});
+    };
+
+    vm.onFocus = function(focus){
+      if(focus){
+          vm.focus = focus;
+      }else{
+        $timeout(function(){
+          vm.focus = focus;
+        },333);
+      }
     };
   }
 

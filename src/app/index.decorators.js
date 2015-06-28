@@ -20,6 +20,10 @@
           }
         };
       });
+    })
+    // resources no trailing slash
+    .config(function($resourceProvider) {
+      $resourceProvider.defaults.stripTrailingSlashes = false;
     });
 
 })();

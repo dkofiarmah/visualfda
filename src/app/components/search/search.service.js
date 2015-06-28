@@ -6,12 +6,8 @@
     .factory('SearchAutocompleteData', SearchAutocompleteData);
 
   /** @ngInject */
-  function SearchAutocompleteData() {
-
-    // api public
-    return {
-
-    };
+  function SearchAutocompleteData($resource) {
+    return $resource('http://localhost:8000/api/drugs/');
   }
 
 })();

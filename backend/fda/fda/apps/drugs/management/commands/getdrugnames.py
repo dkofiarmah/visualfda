@@ -59,7 +59,7 @@ class Command(BaseCommand):
             drug_names = field.split(",")
             for drug_name in drug_names:
                 drug_name = drug_name.strip().capitalize()
-                drug, created = Drug.objects.get_or_create(name=drug_name, field="field_name")
+                drug, created = Drug.objects.get_or_create(name=drug_name, field=field_name)
                 self.writeln(drug_name, 'created' if created else 'updated')
 
     def getdrugsfromfda(self):
