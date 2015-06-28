@@ -8,7 +8,6 @@
       'ngAnimate',
       'openFDA',
       'ui.router',
-      'mgcrea.ngStrap',
     ]);
 
 })();
