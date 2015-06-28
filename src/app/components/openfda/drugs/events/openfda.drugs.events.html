@@ -1,4 +1,4 @@
-<div class="results">
+<div class="results" data-ng-show="drugEvents.filtered > 0">
   <h2 class="results__title">Top ten side effects</h2>
 
   <table class="table results__table">
@@ -6,19 +6,19 @@
     <tbody>
       <tr>
         <td></td>
-        <td>
+        <td class="text-right">
           <div data-ng-bind="drugEvents.filtered" class="results__table__filtered">7520</div>
           <div class="results__table__percentage">
             % of total
-            <span data-ng-bind="drugEvents.percentage|percentage"></span>
+            <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
             (<span data-ng-bind="drugEvents.total"></span>)
           </div>
         </td>
-        <td>
+        <td class="text-right">
           <div data-ng-bind="drugEvents.filtered" class="results__table__filtered">7520</div>
           <div class="results__table__percentage">
             % of total
-            <span data-ng-bind="drugEvents.percentage|percentage"></span>
+            <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
             (<span data-ng-bind="drugEvents.total"></span>)
           </div>
         </td>
@@ -27,12 +27,12 @@
         <td>
           {{$index|position}} {{result.term}}
         </td>
-        <td>
+        <td class="text-right">
         {{result.count|number}}
         </td>
         <td>
-          <div>
-            <div al-barchar ng-model="result.count" data-total="drugEvents.filtered"></div>
+          <div al-barchar ng-model="result.count" data-total="drugEvents.filtered" class="al-barchar">
+            <span data-ng-bind="result.count|percentage:drugEvents.filtered" class="al-barchar__percentage"></span>
           </div>
         </td>
       </tr>
@@ -42,4 +42,8 @@
     Data provided by the U.S. Food and Drug Administration (<a href="https://open.fda.gov">https://open.fda.gov</a>)
   </div>
 
+</div>
+
+<div data-ng-show="drugEvents.filtered == 0 && drugEvents.searching && loading">
+  <div class="text-center">searching...</div>
 </div>

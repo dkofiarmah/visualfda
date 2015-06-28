@@ -1,5 +1,13 @@
-[al-barchar]{
+.al-barchar{
     width: 100%;
     height: 1em;
     background: #408BE8;
+    position: relative;
+}
+.al-barchar__percentage{
+    display: inline-block;
+    position: absolute;
+    right: -3.5em;
+    top: 0;
+    line-height: 1em;
 }

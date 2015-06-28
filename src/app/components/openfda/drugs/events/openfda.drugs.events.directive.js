@@ -26,12 +26,14 @@
     vm.total = 0;
     vm.percentage = 0;
     vm.data = {};
+    vm.searching = false;
 
     openFDADrugsEvents.get({},function(data){
         vm.total = data.meta.results.total;
     });
 
     $scope.$on('search',function(e, data){
+      vm.searching = true;
       openFDADrugsEvents.get({search:data, limit:10, count:'patient.reaction.reactionmeddrapt.exact'}, function(data){
         console.log(e,data);
         vm.data = data;

@@ -13,14 +13,12 @@
          ngModel:'=',
          total:'='
       },
+      transclude:false,
       link: function(scope, element, attrs) {
         scope.$watch('[ngModel, total]', function(newValue, oldValue) {
           var percentage;
-          console.log('scope.ngModel',scope.ngModel);
           if (newValue){
-            percentage = Number(scope.ngModel)/Number(scope.total)*100;
-            console.log(percentage, 'percentage', 'scope', scope);
-            percentage = $filter('percentage')(percentage);
+            percentage = $filter('percentage')(scope.ngModel, scope.total);
             element[0].style.width = percentage;
           }
         }, true);

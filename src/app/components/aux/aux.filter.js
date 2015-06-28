@@ -8,8 +8,9 @@
 
     /** @ngInject */
     function percentage() {
-      return function(input){
-          return input.toFixed(2) + '%';
+      return function(input, total){
+          var _percentage = Number(input) / Number(total) * 100;
+          return _percentage.toFixed(2) + '%';
       }
     }
 
