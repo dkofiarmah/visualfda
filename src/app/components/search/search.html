@@ -1,9 +1,14 @@
 <form class="search" ng-submit='search.submit()' data-ng-init="search.loaded">
     <!-- label for 508Compliance -->
     <div class="row">
-        <div class="col-xs-4 col-xs-offset-4">
+        <div class="search__wrapper">
             <label for="search" class="search__label sr-only">Type the name of a drug</label>
-            <input id="search" class="search__input form-control" type="text" data-ng-model="search.input" placeholder="Type the name of a drug">
+             <input id="search" type="text" class="search__input form-control" data-ng-model="search.input" placeholder="Type the name of a drug" data-animation="am-flip-x" ng-focus="search.onFocus(true)" ng-blur="search.onFocus(false)">
+             <div class="search__filtered-data">
+                 <div ng-repeat="drug in search.drugs.results"  class="search__filtered-data__item" data-ng-click="search.submit(drug)">
+                     {{drug.name}}
+                 </div>
+             </div>
         </div>
     </div>
     <span class="search__message" data-ng-show="search.searchNotFound">

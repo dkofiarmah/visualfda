@@ -4,9 +4,11 @@
   angular
     .module('fdaAppPrototype', [
       // Dependencies
+      'ngAria',
+      'ngAnimate',
       'openFDA',
       'ui.router',
-      'ngAria',
+      'mgcrea.ngStrap',
     ]);
 
 })();

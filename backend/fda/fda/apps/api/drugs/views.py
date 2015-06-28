@@ -11,8 +11,18 @@ from fda.apps.drugs import models
 # ViewSets define the view behavior.
 class DrugsViewSet(viewsets.ReadOnlyModelViewSet):
     model = models.Drug
-    queryset = model.objects.all()
     serializer_class = DrugsSerializer
+
+    def get_queryset(self):
+        """
+        This view should return a list of all drug names
+        filtered by searchText
+        """
+        queryset = self.model.objects.all()
+        searchText = self.request.query_params.get('searchText', None)
+        if searchText is not None:
+            queryset = self.model.objects.filter(name__istartswith=searchText)
+        return queryset
 
     @method_decorator(csrf_exempt)
     def dispatch(self, *args, **kwargs):

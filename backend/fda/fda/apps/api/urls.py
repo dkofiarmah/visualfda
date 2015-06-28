@@ -5,7 +5,7 @@ from fda.apps.api.drugs import views as drugs
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 # Routes for drugs
-router.register(r'drugs', drugs.DrugsViewSet)
+router.register(r'drugs', drugs.DrugsViewSet, 'drugs')
 
 
 urlpatterns = patterns('',
