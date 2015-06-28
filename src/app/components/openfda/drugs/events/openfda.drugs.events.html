@@ -11,19 +11,19 @@
       <tr>
         <td></td>
         <td class="text-right">
-          <div data-ng-bind="drugEvents.filtered" class="results__table__filtered">7520</div>
+          <div data-ng-bind="drugEvents.filtered|number" class="results__table__filtered">7520</div>
           <div class="results__table__percentage">
             % of total
             <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
-            (<span data-ng-bind="drugEvents.total"></span>)
+            (<span data-ng-bind="drugEvents.total|number"></span>)
           </div>
         </td>
         <td class="text-right">
-          <div data-ng-bind="drugEvents.filtered" class="results__table__filtered">7520</div>
+          <div data-ng-bind="drugEvents.filtered|number" class="results__table__filtered">7520</div>
           <div class="results__table__percentage">
             % of total
             <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
-            (<span data-ng-bind="drugEvents.total"></span>)
+            (<span data-ng-bind="drugEvents.total|number"></span>)
           </div>
         </td>
       </tr>
