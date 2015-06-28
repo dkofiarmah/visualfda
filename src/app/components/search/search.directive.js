@@ -16,7 +16,7 @@
   }
 
   /** @ngInject */
-  function search($scope, $rootScope, $state, SearchAutocompleteData, $q) {
+  function search($scope, $rootScope, $state, SearchAutocompleteData, $q, $timeout) {
     var vm = this;
     vm.input = '';
 
@@ -49,7 +49,13 @@
     };
 
     vm.onFocus = function(focus){
-      vm.focus = focus;
+      if(focus){
+          vm.focus = focus;
+      }else{
+        $timeout(function(){
+          vm.focus = focus;
+        },333);
+      }
     };
   }
 

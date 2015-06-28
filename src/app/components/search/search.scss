@@ -11,8 +11,12 @@
     background: white;
     z-index: 9999;
 }
+
 .search__filtered-data__item{
     padding: 0.5em;
+}
+.search__filtered-data--hidden{
+    left: 999999px;
 }
 
 .search__filtered-data__item:hover{
