@@ -3,7 +3,7 @@
     <div class="row">
         <div class="search__wrapper">
             <label for="search" class="search__label sr-only">Type the name of a drug</label>
-             <input id="search" type="text" class="search__input form-control" data-ng-model="search.input" placeholder="Type the name of a drug" data-animation="am-flip-x" ng-focus="search.onFocus(true)" ng-blur="search.onFocus(false)">
+             <input id="search" type="text" class="search__input form-control" data-ng-model="search.input" placeholder="Type the name of a drug" aria-label="Search terms" data-animation="am-flip-x" ng-focus="search.onFocus(true)" ng-blur="search.onFocus(false)">
              <div class="search__filtered-data" ng-show="search.focus === true">
                  <div ng-repeat="drug in search.drugs.results"  class="search__filtered-data__item" data-ng-click="search.submit(drug)">
                      {{drug.name}}
