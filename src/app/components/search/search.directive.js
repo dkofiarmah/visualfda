@@ -16,7 +16,7 @@
   }
 
   /** @ngInject */
-  function search($scope, $rootScope, openFDADrugsEvents, SearchAutocompleteData) {
+  function search($scope, $rootScope, $state, openFDADrugsEvents, SearchAutocompleteData) {
     var vm = this;
 
     vm.input;
@@ -27,15 +27,19 @@
 
     $scope.$on('searchText',function(e, searchText){
       vm.input = searchText;
-      vm.submit();
+      $rootScope.$broadcast('search', vm.input);
     });
 
     $scope.$watch('search.input', function(){
       vm.message = '';
     });
 
+    $scope.$watch('search.loaded', function(){
+      $scope.$emit('searchLoaded');
+    });
+
     vm.submit = function(){
-      $rootScope.$broadcast('search', vm.input);
+      $state.go('home',{searchText:vm.input});
     };
   }
 

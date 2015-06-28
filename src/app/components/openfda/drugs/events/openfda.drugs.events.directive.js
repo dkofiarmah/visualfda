@@ -31,7 +31,6 @@
     }
     initialize();
 
-
     openFDADrugsEvents.get({},function(data){
         vm.total = data.meta.results.total;
     });
