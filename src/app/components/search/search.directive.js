@@ -33,7 +33,7 @@
 
     $scope.$watch('search.input', function(newInput){
       vm.searchNotFound = false;
-      vm.drugs = SearchAutocompleteData.get({searchText:newInput});
+      // vm.drugs = SearchAutocompleteData.get({searchText:newInput});
     });
 
     $scope.$watch('search.loaded', function(){
