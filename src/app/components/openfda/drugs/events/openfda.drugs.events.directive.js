@@ -42,11 +42,9 @@
       vm.searching = true;
 
       reactions = openFDADrugsEvents.get({search:data, limit:10, count:'patient.reaction.reactionmeddrapt.exact'}, function(data){
-        console.log(e,data);
         vm.data = data;
       });
       total = openFDADrugsEvents.get({search:data}, function(data){
-        console.log(e,data);
         vm.filtered = data.meta.results.total;
         vm.percentage = vm.filtered / vm.total * 100;
       });

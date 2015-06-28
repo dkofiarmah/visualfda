@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $rootScope, $stateParams, $timeout) {
+  function MainController($scope, $rootScope, $stateParams) {
     if($stateParams.searchText){
         // Wait until all directives are loaded
         $scope.$on('searchLoaded', function() {

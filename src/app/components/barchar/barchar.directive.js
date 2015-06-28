@@ -1,4 +1,3 @@
-/* global Math */
 // Barchar directive
 (function(){
   'use strict';
@@ -14,8 +13,8 @@
          total:'='
       },
       transclude:false,
-      link: function(scope, element, attrs) {
-        scope.$watch('[ngModel, total]', function(newValue, oldValue) {
+      link: function(scope, element) {
+        scope.$watch('[ngModel, total]', function(newValue) {
           var percentage;
           if (newValue){
             percentage = $filter('percentage')(scope.ngModel, scope.total);

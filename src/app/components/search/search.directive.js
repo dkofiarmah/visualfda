@@ -16,10 +16,9 @@
   }
 
   /** @ngInject */
-  function search($scope, $rootScope, $state, openFDADrugsEvents, SearchAutocompleteData) {
+  function search($scope, $rootScope, $state) {
     var vm = this;
-
-    vm.input;
+    vm.input = '';
 
     $scope.$on('searchNotFound',function(){
       vm.message = 'Oops! We don\'t have that drug. Check your spelling and try agan';

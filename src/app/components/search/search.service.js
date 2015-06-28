@@ -11,7 +11,7 @@
     // api public
     return {
 
-    }
+    };
   }
 
 })();
