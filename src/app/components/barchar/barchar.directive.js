@@ -1,3 +1,4 @@
+/* global Math */
 // Barchar directive
 (function(){
   'use strict';
@@ -9,12 +10,20 @@
     var directive = {
       restrict: 'A',
       scope: {
-           /* other props*/
-           model:'@'/* now have reference to parent object in scope*/
-        },
+         ngModel:'=',
+         total:'='
+      },
       link: function(scope, element, attrs) {
-        var percentage = attrs.total/scope;
-        element[0].style.width = '20%';
+        scope.$watch('[ngModel, total]', function(newValue, oldValue) {
+          var percentage;
+          console.log('scope.ngModel',scope.ngModel);
+          if (newValue){
+            percentage = Number(scope.ngModel)/Number(scope.total)*100;
+            console.log(percentage, 'percentage', 'scope', scope);
+            percentage = $filter('percentage')(percentage);
+            element[0].style.width = percentage;
+          }
+        }, true);
       },
     };
     return directive;
