@@ -25,6 +25,11 @@
       vm.message = 'Oops! We don\'t have that drug. Check your spelling and try agan';
     });
 
+    $scope.$on('searchText',function(e, searchText){
+      vm.input = searchText;
+      vm.submit();
+    });
+
     $scope.$watch('search.input', function(){
       vm.message = '';
     });
