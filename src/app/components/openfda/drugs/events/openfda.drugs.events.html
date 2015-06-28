@@ -1,4 +1,4 @@
-<div class="results" data-ng-show="drugEvents.filtered > 0">
+<div class="results" data-ng-show="drugEvents.filtered > 0 && !drugEvents.searching">
   <h2 class="results__title">Top ten side effects</h2>
 
   <table class="table results__table">
@@ -44,6 +44,6 @@
 
 </div>
 
-<div data-ng-show="drugEvents.filtered == 0 && drugEvents.searching && loading">
+<div data-ng-show="drugEvents.searching">
   <div class="text-center">searching...</div>
 </div>

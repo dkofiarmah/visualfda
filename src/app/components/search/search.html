@@ -6,11 +6,8 @@
             <input id="search" class="search__input form-control" type="text" data-ng-model="search.input" placeholder="Type the name of a drug">
         </div>
     </div>
-    <span class="search__message">
+    <span class="search__message" data-ng-bind="search.message">
     </span>
-    <br>
-    <div>
-        <button type="submit" class="btn btn-success">Show side effects</button>
-    </div>
+    <button type="submit" class="btn btn-success search__button">Show side effects</button>
+
 </form>
-<br>

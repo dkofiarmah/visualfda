@@ -18,31 +18,53 @@
   }
 
   /** @ngInject */
-  function drugsEventsCtrl(openFDADrugsEvents, $scope) {
+  function drugsEventsCtrl(openFDADrugsEvents, $scope, $rootScope, $q) {
     var vm = this;
 
-    // Attributes
-    vm.filtered = 0;
     vm.total = 0;
-    vm.percentage = 0;
-    vm.data = {};
-    vm.searching = false;
+    function initialize(){
+      // Attributes
+      vm.filtered = 0;
+      vm.percentage = 0;
+      vm.data = {};
+      vm.searching = false;
+    }
+    initialize();
+
 
     openFDADrugsEvents.get({},function(data){
         vm.total = data.meta.results.total;
     });
 
     $scope.$on('search',function(e, data){
+      var reactions,
+          total;
+
       vm.searching = true;
-      openFDADrugsEvents.get({search:data, limit:10, count:'patient.reaction.reactionmeddrapt.exact'}, function(data){
+
+      reactions = openFDADrugsEvents.get({search:data, limit:10, count:'patient.reaction.reactionmeddrapt.exact'}, function(data){
         console.log(e,data);
         vm.data = data;
       });
-      openFDADrugsEvents.get({search:data}, function(data){
+      total = openFDADrugsEvents.get({search:data}, function(data){
         console.log(e,data);
         vm.filtered = data.meta.results.total;
         vm.percentage = vm.filtered / vm.total * 100;
       });
+
+      function searchFinished(){
+        vm.searching = false;
+      }
+      function searchNotFound(){
+        vm.searching = false;
+        $rootScope.$broadcast('searchNotFound');
+        initialize();
+      }
+
+      $q.all([
+        total.$promise,
+        reactions.$promise,
+      ]).then(searchFinished,searchNotFound);
     });
 
   }
