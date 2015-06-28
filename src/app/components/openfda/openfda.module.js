@@ -4,7 +4,8 @@
   angular
     .module('openFDA', [
       // Dependencies
-      'ngResource'
+      'ngResource',
+      'ngAria',
     ]);
 
 })();

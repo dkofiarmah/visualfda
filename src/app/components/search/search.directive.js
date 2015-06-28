@@ -21,7 +21,7 @@
     vm.input = '';
 
     $scope.$on('searchNotFound',function(){
-      vm.message = 'Oops! We don\'t have that drug. Check your spelling and try agan';
+      vm.searchNotFound = true;
     });
 
     $scope.$on('searchText',function(e, searchText){
@@ -30,7 +30,7 @@
     });
 
     $scope.$watch('search.input', function(){
-      vm.message = '';
+      vm.searchNotFound = false;
     });
 
     $scope.$watch('search.loaded', function(){
