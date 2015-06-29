@@ -10,15 +10,18 @@
       restrict: 'A',
       scope: {
          ngModel:'=',
-         total:'='
+         total:'=',
+         highest:'=',
       },
+      templateUrl:'app/components/barchar/barchar.html',
       transclude:false,
       link: function(scope, element) {
         scope.$watch('[ngModel, total]', function(newValue) {
-          var percentage;
           if (newValue){
-            percentage = $filter('percentage')(scope.ngModel, scope.total);
-            element[0].style.width = percentage;
+            scope.percentage = $filter('percentage')(scope.ngModel, scope.total);
+
+            var width = 100 * Number(scope.ngModel) / Number(scope.highest);
+            angular.element(element).find('.al-barchar__bar').css('width', width + '%');
           }
         }, true);
       },

@@ -38,16 +38,17 @@
 
     $scope.$on('search',function(e, data){
       var reactions,
-          total;
+          total,
+          filter;
 
-      vm.drugName = data;
+      vm.drugName = data.trim();
 
       vm.searching = true;
-
-      reactions = openFDADrugsEvents.get({search:data, limit:10, count:'patient.reaction.reactionmeddrapt.exact'}, function(data){
+      filter = openFDADrugsEvents.createFilter(vm.drugName);
+      reactions = openFDADrugsEvents.get({search:filter, limit:25, count:'patient.reaction.reactionmeddrapt.exact'}, function(data){
         vm.data = data;
       });
-      total = openFDADrugsEvents.get({search:data}, function(data){
+      total = openFDADrugsEvents.get({search:filter}, function(data){
         vm.filtered = data.meta.results.total;
         vm.percentage = vm.filtered / vm.total * 100;
       });
@@ -61,7 +62,7 @@
         initialize();
       }
 
-      var filteredMonitoring = function(newValue, oldValue){
+      var filteredMonitoring = function(newValue){
         if(newValue > 0){
           $scope.$emit('results-found', newValue);
         }

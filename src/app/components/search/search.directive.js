@@ -16,7 +16,7 @@
   }
 
   /** @ngInject */
-  function search($scope, $rootScope, $state, SearchAutocompleteData, $q, $timeout) {
+  function search($scope, $rootScope, $state, SearchAutocompleteData, $timeout) {
     var vm = this;
     vm.input = '';
 
@@ -41,7 +41,6 @@
     });
 
     vm.submit = function(drug){
-      console.log('drug',drug);
       if(drug){
         vm.input = drug.name;
       }
@@ -60,7 +59,7 @@
 
     vm.clearInput = function(){
       vm.input = '';
-    }
+    };
 
   }
 
