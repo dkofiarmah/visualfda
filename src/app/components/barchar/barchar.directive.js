@@ -17,15 +17,11 @@
       transclude:false,
       link: function(scope, element) {
         scope.$watch('[ngModel, total]', function(newValue) {
-          var percentage;
           if (newValue){
             scope.percentage = $filter('percentage')(scope.ngModel, scope.total);
 
-
             var width = 100 * Number(scope.ngModel) / Number(scope.highest);
-            console.log(width);
             angular.element(element).find('.al-barchar__bar').css('width', width + '%');
-            console.log(angular.element(element).find('.al-barchar__percentage'));
           }
         }, true);
       },

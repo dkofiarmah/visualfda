@@ -62,7 +62,7 @@
         initialize();
       }
 
-      var filteredMonitoring = function(newValue, oldValue){
+      var filteredMonitoring = function(newValue){
         if(newValue > 0){
           $scope.$emit('results-found', newValue);
         }

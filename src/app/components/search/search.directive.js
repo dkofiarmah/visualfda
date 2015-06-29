@@ -41,7 +41,6 @@
     });
 
     vm.submit = function(drug){
-      console.log('drug',drug);
       if(drug){
         vm.input = drug.name;
       }
@@ -60,7 +59,7 @@
 
     vm.clearInput = function(){
       vm.input = '';
-    }
+    };
 
   }
 
