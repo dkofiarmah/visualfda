@@ -28,6 +28,7 @@
       vm.percentage = 0;
       vm.data = {};
       vm.searching = false;
+      vm.drugName = '';
     }
     initialize();
 
@@ -38,6 +39,8 @@
     $scope.$on('search',function(e, data){
       var reactions,
           total;
+
+      vm.drugName = data;
 
       vm.searching = true;
 
@@ -57,6 +60,14 @@
         $rootScope.$broadcast('searchNotFound');
         initialize();
       }
+
+      var filteredMonitoring = function(newValue, oldValue){
+        if(newValue > 0){
+          $scope.$emit('results-found', newValue);
+        }
+      };
+
+      $scope.$watch('drugEvents.filtered', filteredMonitoring, true);
 
       $q.all([
         total.$promise,

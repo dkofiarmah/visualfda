@@ -1,32 +1,13 @@
 <div class="results" data-ng-show="drugEvents.filtered > 0 && !drugEvents.searching">
-  <h2 class="results__title">Top ten side effects</h2>
+  <h2 class="results__title">Top 10 side effects: {{drugEvents.drugName}}</h2>
 
   <table class="table results__table">
     <thead>
       <th scope="col" class="text-center">Side effects</th>
-      <th scope="col" class="text-center">Number of reported adverse events</th>
-      <th scope="col" class="text-center">Percentage</th>
+      <th scope="col" class="text-center"># of adverse events</th>
+      <th scope="col" class="text-center">% of adverse events</th>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td class="text-right">
-          <div data-ng-bind="drugEvents.filtered|number" class="results__table__filtered">7520</div>
-          <div class="results__table__percentage">
-            % of total
-            <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
-            (<span data-ng-bind="drugEvents.total|number"></span>)
-          </div>
-        </td>
-        <td class="text-right">
-          <div data-ng-bind="drugEvents.filtered|number" class="results__table__filtered">7520</div>
-          <div class="results__table__percentage">
-            % of total
-            <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
-            (<span data-ng-bind="drugEvents.total|number"></span>)
-          </div>
-        </td>
-      </tr>
       <tr ng-repeat="result in drugEvents.data.results">
         <td>
           {{$index|position}} {{result.term}}
