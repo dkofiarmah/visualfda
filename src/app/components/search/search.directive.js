@@ -33,7 +33,7 @@
 
     $scope.$watch('search.input', function(newInput){
       vm.searchNotFound = false;
-      // vm.drugs = SearchAutocompleteData.get({searchText:newInput});
+      vm.drugs = SearchAutocompleteData.get({searchText:newInput});
     });
 
     $scope.$watch('search.loaded', function(){
@@ -60,7 +60,24 @@
 
     vm.clearInput = function(){
       vm.input = '';
-    }
+    };
+
+    vm.searchIndex = 0;
+    vm.onKeydown = function($event){
+      console.log($event);
+      switch($event.which){
+        // KEYUP
+        case 38:
+          vm.searchIndex > 0 &&
+          vm.searchIndex--;
+        break;
+        // KEYDOWN
+        case 40:
+          vm.searchIndex = (++vm.searchIndex) % vm.drugs.results.length;
+
+        break;
+      }
+    };
 
   }
 
