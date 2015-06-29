@@ -5,6 +5,25 @@
     background: $green;
 }
 
+.search__filtered-data{
+    text-align: left;
+    border: 1px solid #CCC;
+    position: absolute;
+    box-shadow: 1px 2px 5px #888888;
+    width: 555px;
+    background: white;
+    z-index: 9999;
+}
+.search__filtered-data--hidden{
+    left: 999999px;
+}
+.search__filtered-data__item{
+    padding: 0.5em;
+}
+.search__filtered-data__item:hover{
+    background: #EEE;
+}
+
 .search__input{
     height: $h1;
     font-size: $h3;
