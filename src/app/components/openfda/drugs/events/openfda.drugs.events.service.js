@@ -22,14 +22,14 @@
 
         for (var i = _fields.length - 1; i >= 0; i--) {
             filters.push(_fields[i] + ':' + filter);
-        };
+        }
         filter = filters.join('+');
         return filter;
     };
     return {
         get:_get(),
         createFilter:_createFilter,
-    }
+    };
   }
 
 })();
