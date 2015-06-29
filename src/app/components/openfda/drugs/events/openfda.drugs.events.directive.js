@@ -61,6 +61,14 @@
         initialize();
       }
 
+      var filteredMonitoring = function(newValue, oldValue){
+        if(newValue > 0){
+          $scope.$emit('results-found', newValue);
+        }
+      };
+
+      $scope.$watch('drugEvents.filtered', filteredMonitoring, true);
+
       $q.all([
         total.$promise,
         reactions.$promise,
