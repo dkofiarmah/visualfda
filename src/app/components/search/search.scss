@@ -33,6 +33,12 @@
 }
 .search__input__clear{
     color: $blue;
+}
+.search__input__check{
+    color: $green;
+}
+.search__input__check,
+.search__input__clear{
     cursor: pointer;
     font-size: $h3;
     position: absolute;
