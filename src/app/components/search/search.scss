@@ -1,13 +1,18 @@
 .search__button{
     height: $h1;
     font-size: $h3;
-    margin-top: 1em;
+    //margin-top: 1em;
+    line-height: 0;
+    vertical-align: top;
     background: $green;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
 }
 
 .search__filtered-data{
     text-align: left;
-    border: 1px solid #CCC;
+    //border: 1px solid #CCC;
     position: absolute;
     box-shadow: 1px 2px 5px #888888;
     width: 555px;
@@ -27,23 +32,54 @@
 .search__input{
     height: $h1;
     font-size: $h3;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $white;
+    vertical-align: top;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;    &:focus {
+        border-color: transparent;
+        outline: 0;
+        box-shadow: none;
+    }
 }
 .search__input__wrapper{
     position: relative;
+    display: inline-block;
+    flex: 1;
+    // style the input's placeholder
+
+    & ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    $white;
+    }
+    & :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    $white;
+       opacity:  1;
+    }
+    & ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    $white;
+       opacity:  1;
+    }
+    & :-ms-input-placeholder { /* Internet Explorer 10+ */
+       color:    $white;
+    }
 }
 .search__input__clear{
-    color: $blue;
+    color: $white;
     cursor: pointer;
     font-size: $h3;
     position: absolute;
     right: 2px;
     top: 0.75em;
-    padding: 0 0.5em;
-    text-decoration: underline;
+    margin: 0 0.5em;
+    //text-decoration: underline;
+    border-bottom: 1px solid $white;
     line-height: $h3;
-    font-style: normal;
+    font-style: light;
+    font-weight: 300;
     z-index: 999;
-    background: rgba(255, 255, 255, 1);
+    background: transparent;
     outline: none;
 }
 
@@ -56,4 +92,18 @@
 .search__wrapper{
     width: 555px;
     margin: 0 auto;
+    display: flex;
+}
+
+.header.header--results-found{
+    .search__wrapper{
+        margin-left: 30px;
+        width: auto;
+    }
+    .search__button{
+        height: 4rem;
+    }
+    .search__input{
+        height: 4rem;
+    }
 }
