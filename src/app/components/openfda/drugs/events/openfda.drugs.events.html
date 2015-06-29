@@ -8,25 +8,6 @@
       <th scope="col" class="text-center">% of adverse events</th>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td class="text-right">
-          <div data-ng-bind="drugEvents.filtered|number" class="results__table__filtered">7520</div>
-          <div class="results__table__percentage">
-            % of total
-            <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
-            (<span data-ng-bind="drugEvents.total|number"></span>)
-          </div>
-        </td>
-        <td class="text-right">
-          <div data-ng-bind="drugEvents.filtered|number" class="results__table__filtered">7520</div>
-          <div class="results__table__percentage">
-            % of total
-            <span data-ng-bind="drugEvents.filtered|percentage:drugEvents.total"></span>
-            (<span data-ng-bind="drugEvents.total|number"></span>)
-          </div>
-        </td>
-      </tr>
       <tr ng-repeat="result in drugEvents.data.results">
         <td>
           {{$index|position}} {{result.term}}
