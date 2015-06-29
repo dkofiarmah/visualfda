@@ -48,35 +48,8 @@
       $state.go('home',{searchText:vm.input});
     };
 
-    vm.onFocus = function(focus){
-      if(focus){
-          vm.focus = focus;
-      }else{
-        $timeout(function(){
-          vm.focus = focus;
-        },333);
-      }
-    };
-
     vm.clearInput = function(){
       vm.input = '';
-    };
-
-    vm.searchIndex = 0;
-    vm.onKeydown = function($event){
-      console.log($event);
-      switch($event.which){
-        // KEYUP
-        case 38:
-          vm.searchIndex > 0 &&
-          vm.searchIndex--;
-        break;
-        // KEYDOWN
-        case 40:
-          vm.searchIndex = (++vm.searchIndex) % vm.drugs.results.length;
-
-        break;
-      }
     };
 
   }
