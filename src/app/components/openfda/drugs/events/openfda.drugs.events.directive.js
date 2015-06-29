@@ -28,6 +28,7 @@
       vm.percentage = 0;
       vm.data = {};
       vm.searching = false;
+      vm.drugName = '';
     }
     initialize();
 
@@ -38,6 +39,8 @@
     $scope.$on('search',function(e, data){
       var reactions,
           total;
+
+      vm.drugName = data;
 
       vm.searching = true;
 
