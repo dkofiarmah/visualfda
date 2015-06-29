@@ -10,7 +10,7 @@
         return {
           'request': function(config) {
              window.encodeURIComponent = function(input) {
-               return realEncodeURIComponent(input).split("%2B").join("+");
+               return realEncodeURIComponent(input).split('%2B').join('+').split('%251F').join('"');
              };
              return config || $q.when(config);
           },
