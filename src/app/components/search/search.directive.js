@@ -48,9 +48,19 @@
       $state.go('home',{searchText:vm.input});
     };
 
+    vm.onFocus = function(focus){
+      if(focus){
+          vm.focus = focus;
+      }else{
+        $timeout(function(){
+          vm.focus = focus;
+        },333);
+      }
+    };
+
     vm.clearInput = function(){
       vm.input = '';
-    };
+    }
 
   }
 
