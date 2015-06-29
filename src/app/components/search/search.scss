@@ -28,10 +28,29 @@
     height: $h1;
     font-size: $h3;
 }
+.search__input__wrapper{
+    position: relative;
+}
+.search__input__clear{
+    color: $blue;
+    cursor: pointer;
+    font-size: $h3;
+    position: absolute;
+    right: 2px;
+    top: 0.75em;
+    padding: 0 0.5em;
+    text-decoration: underline;
+    line-height: $h3;
+    font-style: normal;
+    z-index: 999;
+    background: rgba(255, 255, 255, 1);
+    outline: none;
+}
 
 .search__message{
     margin-top: 1em;
     display: block;
+    color: $yellow;
 }
 
 .search__wrapper{

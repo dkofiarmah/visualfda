@@ -57,6 +57,11 @@
         },333);
       }
     };
+
+    vm.clearInput = function(){
+      vm.input = '';
+    }
+
   }
 
 })();
