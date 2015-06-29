@@ -1,31 +1,47 @@
 <div class="results" data-ng-show="drugEvents.filtered > 0 && !drugEvents.searching">
   <h2 class="results__title">Top 10 side effects: {{drugEvents.drugName}}</h2>
 
-  <table class="table results__table">
+  <table class="table table-striped table-bordered table-condensed table-hover results__table">
     <thead>
-      <th scope="col" class="text-center">Side effects</th>
-      <th scope="col" class="text-center"># of adverse events</th>
-      <th scope="col" class="text-center">% of adverse events</th>
+      <th scope="col" class="text-center">Rank</th>
+      <th scope="col" class="text-center">Drug Reaction</th>
+      <th scope="col" class="text-center">Number of Reactions</th>
+      <th scope="col" class="text-center">Percentage of Reactions</th>
     </thead>
     <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <span class="results__table__total">
+            {{drugEvents.filtered}}
+            <small  class="results__table__total__legend"># of Total Reactions</small>
+          </span>
+        </td>
+        <td>
+          <small  class="results__table__total__legend">% of Total Reactions ({{drugEvents.filtered}})</small>
+        </td>
+      </tr>
       <tr ng-repeat="result in drugEvents.data.results">
         <td>
-          {{$index|position}} {{result.term}}
+          {{$index|position}}
+        </td>
+        <td>
+          {{result.term}}
         </td>
         <td class="text-right">
         {{result.count|number}}
         </td>
         <td>
-          <div al-barchar ng-model="result.count" data-total="drugEvents.filtered" class="al-barchar">
-            <span data-ng-bind="result.count|percentage:drugEvents.filtered" class="al-barchar__percentage"></span>
+          <div al-barchar ng-model="result.count" data-total="drugEvents.filtered" data-highest="drugEvents.data.results[0].count" class="al-barchar">
           </div>
         </td>
       </tr>
     </tbody>
+    <caption class="text-center" align="bottom">
+      Data provided by the U.S. Food and Drug Administration (<a href="https://open.fda.gov" target="__blank">https://open.fda.gov</a>)
+    </caption>
   </table>
-  <div class="text-center">
-    Data provided by the U.S. Food and Drug Administration (<a href="https://open.fda.gov" target="__blank">https://open.fda.gov</a>)
-  </div>
 
 </div>
 
