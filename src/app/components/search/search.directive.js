@@ -16,7 +16,7 @@
   }
 
   /** @ngInject */
-  function search($scope, $rootScope, $state, SearchAutocompleteData, $q, $timeout) {
+  function search($scope, $rootScope, $state, SearchAutocompleteData, $timeout) {
     var vm = this;
     vm.input = '';
 
