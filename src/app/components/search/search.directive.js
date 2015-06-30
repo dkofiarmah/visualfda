@@ -1,7 +1,7 @@
   // Search input
 (function(){
   'use strict';
-  angular.module('openFDA')
+  angular.module('fdaAppPrototype')
     .directive('alSearch', alSearch);
 
   /** @ngInject */
