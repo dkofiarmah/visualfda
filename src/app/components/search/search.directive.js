@@ -60,7 +60,7 @@
       }
     };
 
-    vm.itemSelected = 0;
+    vm.itemSelected = -1;
     vm.onKeydown = function($event){
       console.log($event);
       switch($event.which){
@@ -80,6 +80,7 @@
           vm.input = vm.drugs.results[vm.itemSelected].name;
         break;
         default:
+          vm.itemSelected = -1;
           vm.getDrugNames = true;
         break;
       }
