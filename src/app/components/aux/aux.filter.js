@@ -4,6 +4,7 @@
   angular
     .module('fdaAppPrototype')
     .filter('percentage', percentage)
+    .filter('capitalize', capitalize)
     .filter('position', position);
 
     /** @ngInject */
@@ -18,6 +19,14 @@
     function position() {
       return function(input){
           return (Number(input) + 1) + '.';
+      };
+    }
+
+    /** @ngInject */
+    function capitalize() {
+      return function(input){
+          input = input.toLowerCase();
+          return input.charAt(0).toUpperCase() + input.slice(1);
       };
     }
 })();
