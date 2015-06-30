@@ -25,6 +25,7 @@
 .search__filtered-data__item{
     padding: 0.5em;
 }
+.search__filtered-data__item--hover,
 .search__filtered-data__item:hover{
     background: #EEE;
 }
@@ -71,7 +72,21 @@
 .search__input__check{
     color: $green;
 }
-.search__input__check,
+.search__input__check{
+      cursor: pointer;
+      font-size: 2rem;
+      position: absolute;
+      right: 2px;
+      /* top: 0.75em; */
+      margin: 0 0.5em;
+      text-decoration: none;
+      line-height: 5rem;
+      font-style: light;
+      font-weight: 300;
+      z-index: 999;
+      background: transparent;
+      outline: none;
+}
 .search__input__clear{
     cursor: pointer;
     font-size: $h3;
@@ -111,5 +126,8 @@
     }
     .search__input{
         height: 4rem;
+    }
+    .search__input__check{
+        line-height: 4rem;
     }
 }
