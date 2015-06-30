@@ -18,7 +18,7 @@
   }
 
   /** @ngInject */
-  function drugsEventsCtrl(openFDADrugsEvents, $scope, $rootScope, $q) {
+  function drugsEventsCtrl(openFDADrugsEvents, $scope, $rootScope, $q, openFDAService) {
     var vm = this;
 
     vm.total = 0;
@@ -58,13 +58,16 @@
       }
       function searchNotFound(){
         vm.searching = false;
-        $rootScope.$broadcast('searchNotFound');
+        $rootScope.$broadcast('searchNotFound', 0);
         initialize();
+        openFDAService.resultsFound = 0;
       }
 
       var filteredMonitoring = function(newValue){
         if(newValue > 0){
+          console.log('results found');
           $scope.$emit('results-found', newValue);
+          openFDAService.resultsFound = newValue;
         }
       };
 
