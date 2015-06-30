@@ -51,18 +51,18 @@
     // style the input's placeholder
 
     & ::-webkit-input-placeholder { /* WebKit browsers */
-        color:    $white;
+        color:    $black;
     }
     & :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color:    $white;
+       color:    $black;
        opacity:  1;
     }
     & ::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color:    $white;
+       color:    $black;
        opacity:  1;
     }
     & :-ms-input-placeholder { /* Internet Explorer 10+ */
-       color:    $white;
+       color:    $black;
     }
 }
 .search__input__clear{
