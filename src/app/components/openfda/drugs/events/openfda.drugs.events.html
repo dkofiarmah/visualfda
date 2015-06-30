@@ -14,15 +14,15 @@
         <td></td>
         <td>
           <span class="results__table__total">
-            {{drugEvents.filtered}}
+            {{drugEvents.filtered|number}}
           </span>
           <small  class="results__table__total__legend"># of Total Reactions</small>
         </td>
         <td>
           <span class="results__table__total results__table__total--hidden">
-            {{drugEvents.filtered}}
+            {{drugEvents.filtered|number}}
           </span>
-          <small class="results__table__total__legend">% of Total Reactions ({{drugEvents.filtered}})</small>
+          <small class="results__table__total__legend">% of Total Reactions ({{drugEvents.filtered|number}})</small>
         </td>
       </tr>
       <tr ng-repeat="result in drugEvents.data.results">
