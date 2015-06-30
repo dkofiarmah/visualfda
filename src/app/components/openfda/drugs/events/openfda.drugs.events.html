@@ -1,5 +1,5 @@
 <div class="results" data-ng-show="drugEvents.filtered > 0 && !drugEvents.searching">
-  <h2 class="results__title">Top 25 side effects: <span class="results__title__drug-name">{{drugEvents.drugName}}</span></h2>
+  <h2 class="results__title">Top {{drugEvents.data.results.length}} side effects: <span class="results__title__drug-name">{{drugEvents.drugName}}</span></h2>
 
   <table class="table table-striped table-bordered table-condensed table-hover results__table">
     <thead class="results__table__head">
