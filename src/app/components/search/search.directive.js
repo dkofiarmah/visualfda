@@ -1,4 +1,4 @@
-// Search input
+  // Search input
 (function(){
   'use strict';
   angular.module('openFDA')
@@ -18,8 +18,9 @@
   /** @ngInject */
   function search($scope, $rootScope, $state, SearchAutocompleteData, $timeout) {
     var vm = this;
-    vm.input = '';
 
+    vm.getDrugNames = true;
+    vm.input = '';
     vm.drugs = [];
 
     $scope.$on('searchNotFound',function(){
@@ -33,7 +34,9 @@
 
     $scope.$watch('search.input', function(newInput){
       vm.searchNotFound = false;
-      vm.drugs = SearchAutocompleteData.get({searchText:newInput});
+      if(vm.getDrugNames){
+        vm.drugs = SearchAutocompleteData.get({searchText:newInput});
+      }
     });
 
     $scope.$watch('search.loaded', function(){
@@ -54,6 +57,31 @@
         $timeout(function(){
           vm.focus = focus;
         },333);
+      }
+    };
+
+    vm.itemSelected = 0;
+    vm.onKeydown = function($event){
+      console.log($event);
+      switch($event.which){
+        // KEYUP
+        case 38:
+          if(vm.itemSelected > 0){
+            vm.itemSelected--;
+          }
+          vm.getDrugNames = false;
+          vm.input = vm.drugs.results[vm.itemSelected].name;
+        break;
+        // KEYDOWN
+        case 40:
+          vm.itemSelected++;
+          vm.itemSelected = vm.itemSelected % vm.drugs.results.length;
+          vm.getDrugNames = false;
+          vm.input = vm.drugs.results[vm.itemSelected].name;
+        break;
+        default:
+          vm.getDrugNames = true;
+        break;
       }
     };
 
