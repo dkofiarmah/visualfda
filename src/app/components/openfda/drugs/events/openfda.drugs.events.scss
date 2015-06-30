@@ -1,17 +1,12 @@
 // styles related to drugs results here
 
-.results__title{
-    font-size: 3.5rem;
-    text-align: center;
-    padding: 0.5em 0;
-}
-.results__title__drug-name{
-    color: $blue;
-}
 .results__table__total{
     font-size: $h3;
     display: block;
     text-align: right;
+}
+.results__table__caption{
+    color: $black;
 }
 .results__table__total--hidden{
     visibility: hidden;
@@ -25,4 +20,13 @@
 }
 .results__table__head__item{
     font-weight: normal;
+}
+
+.results__title{
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 0.5em 0;
+}
+.results__title__drug-name{
+    color: $blue;
 }
