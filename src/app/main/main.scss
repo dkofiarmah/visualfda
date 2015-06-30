@@ -1,4 +1,4 @@
-// Typography 
+// Typography
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
 // Headers
@@ -93,4 +93,11 @@ body{
     .al-search{
         width: 60%;
     }
+}
+
+
+footer,
+.footer{
+    text-align: center;
+    padding: 0.5em 0;
 }

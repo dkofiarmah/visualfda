@@ -1,12 +1,12 @@
 <div class="results" data-ng-show="drugEvents.filtered > 0 && !drugEvents.searching">
-  <h2 class="results__title">Top 10 side effects: {{drugEvents.drugName}}</h2>
+  <h2 class="results__title">Top 25 side effects: <span class="results__title__drug-name">{{drugEvents.drugName}}</span></h2>
 
   <table class="table table-striped table-bordered table-condensed table-hover results__table">
-    <thead>
-      <th scope="col" class="text-center">Rank</th>
-      <th scope="col" class="text-center">Drug Reaction</th>
-      <th scope="col" class="text-center">Number of Reactions</th>
-      <th scope="col" class="text-center">Percentage of Reactions</th>
+    <thead class="results__table__head">
+      <th scope="col" class="text-center results__table__head__item">Rank</th>
+      <th scope="col" class="text-center results__table__head__item">Drug Reaction</th>
+      <th scope="col" class="text-center results__table__head__item">Number of Reactions</th>
+      <th scope="col" class="text-center results__table__head__item">Percentage of Reactions</th>
     </thead>
     <tbody>
       <tr>
@@ -15,11 +15,14 @@
         <td>
           <span class="results__table__total">
             {{drugEvents.filtered}}
-            <small  class="results__table__total__legend"># of Total Reactions</small>
           </span>
+          <small  class="results__table__total__legend"># of Total Reactions</small>
         </td>
         <td>
-          <small  class="results__table__total__legend">% of Total Reactions ({{drugEvents.filtered}})</small>
+          <span class="results__table__total results__table__total--hidden">
+            {{drugEvents.filtered}}
+          </span>
+          <small class="results__table__total__legend">% of Total Reactions ({{drugEvents.filtered}})</small>
         </td>
       </tr>
       <tr ng-repeat="result in drugEvents.data.results">

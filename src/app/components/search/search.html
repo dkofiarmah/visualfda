@@ -4,7 +4,6 @@
         <label for="search" class="search__label sr-only">Type the name of a drug</label>
          <div class="search__input__wrapper">
             <span  class="search__input__clear" data-ng-show="search.searchNotFound" data-ng-click="search.clearInput()" >Clear search</span>
-            <span  class="search__input__check" data-ng-show="!search.searchNotFound && search.input" data-ng-click="search.clearInput()" ><i class="glyphicon glyphicon-ok"></i></span>
             <input id="search" type="text" class="search__input form-control" data-ng-model="search.input" placeholder="Type the name of a drug" aria-label="Search terms" data-animation="am-flip-x" ng-focus="search.onFocus(true)" ng-blur="search.onFocus(false)" required>
              <div class="search__filtered-data" ng-show="search.focus === true">
                  <div ng-repeat="drug in search.drugs.results"  class="search__filtered-data__item" data-ng-click="search.submit(drug)">
