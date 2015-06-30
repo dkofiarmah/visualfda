@@ -37,6 +37,9 @@
       if(vm.getDrugNames && newInput){
         vm.drugs = SearchAutocompleteData.get({searchText:newInput});
       }
+      if(!newInput){
+        vm.drugs = [];
+      }
     });
 
     $scope.$watch('search.loaded', function(){
