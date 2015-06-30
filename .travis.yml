@@ -17,7 +17,9 @@ deploy:
   provider: heroku
   api_key:
     secure: WxWWXRnf95BgbpiDLVspfASnjuryLtv6M+By65duD+5Y3cT7jFMnH1GwLAPKd+toxCATo8BXiZzLvlb9EBO960d47BMnzEL3WoyAhhtV+P2ancE/r+wmaNSXUMh2MY8DCcs3ULHY/81kp+z3mqoIzALUjviHyLDK2EPyeDVMhbayOXtfMbPUL0jaaL90E9VMGRbTH9gjFcfmhLTlpsIpueuar+H+4AGoCGCjZ9qsfc4Jk3vdqJUEyqOfEwqMuazdAX6uXFPRscZ3GzH0/WWh27w3XVogTPynLZER/6J2PdDWLnJCo5o9oe7G8KoCEpVk4ylwb5wY79bwoRH3okQk6fIxSEjLpcrFl4excKAuT3JjlzHFGiHeZBrFwBhzkEr8PY2IfPkJactEamta1XiPQlAsmqOqHrDk2/HlqRTq0p4eI4Qd//mWovxI9LKbZNxPs7Ffqqft5TbPu6qaiOWC0hzJffmrF/SkSdLYKmdLnNo8l0WpQZU4QQ+heCA0WH6Jxj4O8NxQN2HkR/Yqf+TNARX1vEwmt7XqF+h3h4AEOxa5Qk4JekDCZECFJ73rILcdqDAEztA8xeCFhES8ic2CS+WyT66dpP2BVsYdW3wt04syQGUqzHunLmqg8by0+3ITRoYFYOXMfufW/hOYNZALrkf/gWYZDnJd8h8XUrUUKoY=
-  app: visualfda
+  app:
+    master: visualfda
+    develop: visualfdastaging
   on:
     repo: inqbation/visualfda
 # deploy:

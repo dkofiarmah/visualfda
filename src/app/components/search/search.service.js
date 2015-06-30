@@ -2,12 +2,12 @@
   'use strict';
 
   angular
-    .module('openFDA')
+    .module('fdaAppPrototype')
     .factory('SearchAutocompleteData', SearchAutocompleteData);
 
   /** @ngInject */
-  function SearchAutocompleteData($resource) {
-    return $resource('//fdadrugnames.herokuapp.com/api/drugs/');
+  function SearchAutocompleteData($resource, searchSettings) {
+    return $resource(searchSettings.baseURL + searchSettings.apiPath + searchSettings.resource.drug.path);
   }
 
 })();
