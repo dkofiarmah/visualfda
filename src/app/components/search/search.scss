@@ -5,9 +5,19 @@
     line-height: 0;
     vertical-align: top;
     background: $green;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    @include border-left-radius(0); 
     border: none;
+    @media (max-width: $screen-xs) {
+        text-indent: -2000px;
+        padding-left: 32px;
+    }
+    span.glyphicon {
+        display: none;
+        @media (max-width: $screen-xs) {
+            display: block;
+            text-align: right;
+        }
+    }
 }
 
 .search__filtered-data{
@@ -38,8 +48,11 @@
     // background-color: rgba(255, 255, 255, 0.2);
     color: $black;
     vertical-align: top;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;    &:focus {
+   @include border-right-radius(0); 
+    @media (max-width: $screen-xs) {
+        font-size: 5.5vw;
+    }
+    &:focus {
         border-color: transparent;
         outline: 0;
         box-shadow: none;
@@ -114,18 +127,32 @@
     width: 555px;
     margin: 0 auto;
     display: flex;
+    @media (max-width: $screen-sm) {
+        width: 100%;
+    }
 }
+
+// Styles when the header is sticked to the top
 
 .header.header--results-found{
     .search__wrapper{
         margin-left: 30px;
         width: auto;
+        @media (max-width: $screen-sm) {
+           margin-left: 0;
+        }
     }
     .search__button{
         height: 4rem;
+        @media (max-width: $screen-sm) {
+            //height: 3.2rem;
+        }
     }
     .search__input{
         height: 4rem;
+        @media (max-width: $screen-sm) {
+            //height: 3.2rem;
+        }
     }
     .search__input__check{
         line-height: 4rem;

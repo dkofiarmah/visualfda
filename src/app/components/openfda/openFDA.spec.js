@@ -42,43 +42,6 @@
       });
 
     });
-    /*
-    describe('API Status',function(){
-
-      describe('resources', function() {
-          var $httpBackend;
-          // inject service
-          beforeEach(inject(function(_$httpBackend_){
-            $httpBackend = _$httpBackend_;
-          }));
-
-        it('should return ok for drugs', function(){
-          var status;
-          var resource = [
-              {
-                "endpoint": "recall",
-                "status": "GREEN",
-                "last_updated": "2015-05-31",
-                "documents": 25540,
-                "requests": 44153,
-                "latency": 5.181301383824429
-              }
-            ];
-
-          $httpBackend.expect('GET', openFDAService.statusURL()).respond(200, resource);
-
-          status = openFDAService.status();
-
-          $httpBackend.flush();
-
-          expect(status[0]).toBe(resource);
-
-        });
-      });
-
-    });
-    */
-
 
   });
 })();

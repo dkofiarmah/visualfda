@@ -37,6 +37,9 @@
       if(vm.getDrugNames && newInput){
         vm.drugs = SearchAutocompleteData.get({searchText:newInput});
       }
+      if(!newInput){
+        vm.drugs = [];
+      }
     });
 
     $scope.$watch('search.loaded', function(){
@@ -62,10 +65,13 @@
 
     vm.itemSelected = -1;
     vm.onKeydown = function($event){
-      console.log($event);
+
       switch($event.which){
         // KEYUP
         case 38:
+          if (typeof vm.drugs.results === 'undefined') {
+            break;
+          }
           if(vm.itemSelected > 0){
             vm.itemSelected--;
           }
@@ -74,6 +80,9 @@
         break;
         // KEYDOWN
         case 40:
+          if (typeof vm.drugs.results === 'undefined') {
+            break;
+          }
           vm.itemSelected++;
           vm.itemSelected = vm.itemSelected % vm.drugs.results.length;
           vm.getDrugNames = false;
