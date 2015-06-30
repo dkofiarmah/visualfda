@@ -34,7 +34,7 @@
 
     $scope.$watch('search.input', function(newInput){
       vm.searchNotFound = false;
-      if(vm.getDrugNames){
+      if(vm.getDrugNames && newInput){
         vm.drugs = SearchAutocompleteData.get({searchText:newInput});
       }
     });
