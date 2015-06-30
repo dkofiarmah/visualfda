@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function SearchAutocompleteData($resource) {
-    return $resource('http://fdadrugnames.herokuapp.com/api/drugs/');
+    return $resource('//fdadrugnames.herokuapp.com/api/drugs/');
   }
 
 })();
