@@ -65,7 +65,6 @@
 
       var filteredMonitoring = function(newValue){
         if(newValue > 0){
-          console.log('results found');
           $scope.$emit('results-found', newValue);
           openFDAService.resultsFound = newValue;
         }
@@ -77,6 +76,7 @@
         total.$promise,
         reactions.$promise,
       ]).then(searchFinished,searchNotFound);
+
     });
 
   }
