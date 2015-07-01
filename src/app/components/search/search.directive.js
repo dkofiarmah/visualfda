@@ -50,7 +50,7 @@
       if(drug){
         vm.input = drug.name;
       }
-      $state.go('home',{searchText:vm.input});
+      $state.go('home',{searchText:vm.input}, {reload: true});
     };
 
     vm.onFocus = function(focus){
