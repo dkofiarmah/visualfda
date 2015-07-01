@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $rootScope, $stateParams, openFDAService) {
+  function MainController($scope, $rootScope, $stateParams) {
     var vm = this;
 
 
@@ -21,7 +21,7 @@
         // Wait until all directives are loaded
         $scope.$on('searchLoaded', function() {
             $rootScope.$broadcast('searchText',$stateParams.searchText);
-            vm.resultsFound = openFDAService.resultsFound;
+            vm.resultsFound = 1;
         });
     }
   }
