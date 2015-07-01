@@ -9,7 +9,6 @@
   function MainController($scope, $rootScope, $stateParams, openFDAService) {
     var vm = this;
 
-    vm.resultsFound = openFDAService.resultsFound;
 
     var onResults = function(e, resultsFound){
       vm.resultsFound = resultsFound;
@@ -22,6 +21,7 @@
         // Wait until all directives are loaded
         $scope.$on('searchLoaded', function() {
             $rootScope.$broadcast('searchText',$stateParams.searchText);
+            vm.resultsFound = openFDAService.resultsFound;
         });
     }
   }
