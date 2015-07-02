@@ -1,9 +1,9 @@
 <div class="header text-center" ng-class="{'header--results-found':main.resultsFound > 0}">
-  <h1 class="header__title"><a ng-href="/#/" class="header__title">What are the side effects?</a></h1>
+  <h1 class="header__title"><a ng-href="#/" class="header__title">What are the side effects?</a></h1>
   <div data-al-search class="al-search"></div>
 </div>
 
-<div class="container">
+<div class="container" data-ng-show="main.resultsFound">
 
   <div class="row">
     <div class="col-sm-12">
@@ -16,5 +16,11 @@
 </div>
 
 <footer class="footer">
-  (c) 2015 - For the purpose of this GSA RFQ Agile Delivery Services BPA, all copyright, trademark, and patent rights in this work, where applicable, are waived by <a href="http://www.inqbation.com/" target="__blank">Blake Newman</a> on behalf of <a href="http://www.inqbation.com/" target="__blank">inQbation LLC</a> dba <a href="http://www.inqbation.com/" target="__blank">Agileana LC</a>.
+  <div class="container footer__container">
+    <div class="row">
+      <div class="col-sm-12">
+          (c) 2015 - For the purpose of this GSA RFQ Agile Delivery Services BPA, all copyright, trademark, and patent rights in this work, <br> where applicable, are waived by <a href="http://www.inqbation.com/" target="__blank">Blake Newman</a> on behalf of <a href="http://www.inqbation.com/" target="__blank">inQbation LLC</a> dba <a href="http://www.inqbation.com/" target="__blank">Agileana LC</a>.
+      </div>
+    </div>
+  </div>
 </footer>
