@@ -144,7 +144,8 @@ footer,
     }
 }
 .footer__container{
-    padding-top: 1em;
+    display: table-cell;
+    vertical-align: middle;
     background: $blue;
 }
 .footer__copyright{
