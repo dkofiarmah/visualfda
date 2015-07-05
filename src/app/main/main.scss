@@ -38,7 +38,7 @@ body{
     background-size: cover;
     background-position: center;
     //padding: 15em 0;
-    height: 93%;
+    height: 90%;
     //position: relative;
     padding: 0 30px;
     margin: 0;
@@ -139,17 +139,25 @@ footer,
     padding: 0.5em 0;
     background: #EEE;
     width: 100%;
+    background-color: $blue;
+    .container{
+        border-top: 1px solid white;
+    }
 }
 .footer__container{
-    display: table-cell;
-    vertical-align: middle;
-    background: #EEE;
+    padding: 0.5em 0;
+    background: $blue;
 }
 .footer__copyright{
+    color: white;
     margin: 0 auto;
     max-width: 700px;
     @media (max-width: $screen-xs) {
        font-size: 12px;
        line-height: 1;
+    }
+    a{
+        color: white;
+        text-decoration: underline;
     }
 }
