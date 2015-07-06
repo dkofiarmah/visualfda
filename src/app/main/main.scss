@@ -173,6 +173,10 @@ footer,
     position: absolute;
     right: 0;
     top: 25%;
+    z-index: 100;
+    @media (max-width: $screen-sm) {
+       top: 5%;
+    }
     .fa{
         font-size: 3rem;
         line-height: 5rem;
@@ -184,6 +188,13 @@ footer,
         text-align: center;
         cursor: pointer;
         transition: all .15s ease;
+
+        @media (max-width: $screen-xs){
+            font-size: 2.5rem;
+            height: 45px;
+            width: 45px;
+        }
+
         &:hover{
             text-decoration: none;
         }
