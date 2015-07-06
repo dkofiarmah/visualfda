@@ -30,14 +30,20 @@ body,
 body{
     font-family: $sans-serif-font;
     -webkit-font-smoothing: antialiased;
-}
-
-.header{
     background-color: $blue;
     background-image: url(../assets/images/background.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: right center;
     background-attachment: fixed;
+}
+
+.header{
+    background-color: transparent;
+    // background-color: $blue;
+    // background-image: url(../assets/images/background.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
     //padding: 15em 0;
     height: 90%;
     //position: relative;
@@ -104,6 +110,7 @@ body{
     height: 7rem;
     flex-direction: row;
     justify-content: flex-start;
+    background-color: $blue;
     @media (max-width: $screen-sm) {
         height: auto;
         padding-top: 10px;
@@ -129,6 +136,9 @@ body{
             width: 100%;
         }
     }
+    & ~ .footer{
+        background-color: $blue;
+    }
 }
 
 
@@ -139,11 +149,12 @@ footer,
     text-align: center;
     background: #EEE;
     width: 100%;
-    background-color: $blue;
-    background-image: url(../assets/images/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: transparent;
+    // background-color: $blue;
+    // background-image: url(../assets/images/background.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
     .container{
         //border-top: 1px solid white;
     }
