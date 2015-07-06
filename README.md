@@ -35,7 +35,7 @@ Following the USDS Playbook, we brought in an experienced, multidisciplinary tea
 - [x] Addressed the whole experience from start to finish
 - [x] Made it simple and intuitive
 
-The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.
+The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We wanted to practice Lean Startup by first listening to needs, understanding those needs, rapidly producing a prototype based on those needs, seeking feedback, and iterating based on that feedback.
 
 On Father’s Day weekend, everybody on the team took this opportunity to poll mothers, fathers, and grandparents about what bothers them about drugs and drug commercials that we could possibly glean from the datasets on Open.FDA.gov.
  
