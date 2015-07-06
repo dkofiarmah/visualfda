@@ -8,6 +8,7 @@
       'ngAnimate',
       'openFDA',
       'ui.router',
+      'socialLinks',
     ]);
 
 })();
