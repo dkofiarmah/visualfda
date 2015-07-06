@@ -45,7 +45,15 @@ The primary user story is: As a patient or patient advocate, I want to know the 
  
 Finally, we wanted to produce a simple, intuitive, and accessible (Section 508 compliant) chart that allowed people to understand either visually or with assistive technology.  
 
-During the development process we leveraged participatory design, usability testing, and heuristic evaluation to ensure that we met our goal.  We tapped friends and family who were not part of the development process to give us fresh perspectives of the user experience.
+Incorporating User Centered Design into prototype development we initially started by conducting a small focus group consisting of five diverse individuals. This focus group combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for all users (including non-medically savvy consumers) to quickly and easily search and view the top adverse drug reactions. To achieve this goal we decided that a simple, usable, and accessible interface was necessary. To ensure that all of these were met we employed the following user centered design techniques: participatory design, usability testing, and heuristic evaluation.
+
+As big fans of Steve Krug's "Don't Make Me Think" we put a big emphasis on making things simple and intuitive.  We helped people enter data correctly, coached them when they got something wrong, and rewarded them when they got something right.  Some of the techniques used included:
+
+* Brainstorming
+* Storyboarding
+* Paper Prototyping
+* Software Prototyping
+* Controlled Usability Testing
 
 ## Agile Process
 
@@ -55,7 +63,7 @@ During the development process we leveraged participatory design, usability test
 - [x] Release early, iteratively, often
 - [x] Only do it if it adds value
 
-At inQbation Labs (our R&D division), we use an agile development framework including scrum, sprints, product backlog, kanban, automated testing, continuous integration, and Lean Startup to design, develop, and deploy software as a service web apps for ourselves and our clients.  We learned these skills by reading and studying the Agile Manifesto, Scrum Guide, and the Agile Samurai.  We masted the skills by doing it, failing, performing retrospectives, and doing it again.  We also hold certificates in Project Management and Certified Scrum Master, which gave us theoretical background knowledge to apply in different situations.
+At inQbation Labs (our R&D division), we use an agile development framework including scrum, sprints, product backlog, kanban, automated testing, continuous integration, and Lean Startup to design, develop, and deploy software as a service web apps for ourselves and our clients.  We learned these skills by reading and studying the Agile Manifesto, Scrum Guide, and the Agile Samurai.  We masted the skills by doing it, failing, performing retrospectives, and doing it again.  We also hold certificates in Project Management and Certified Scrum Master, which gave us theoretical background knowledge to apply in different situations.  As we experiment in the lab and develop best practices and standard operating procedures, we implement these with our client projects on the service side of the house (Agileana).
  
 For this prototype, we held an initial kick-off meeting where we produced an inception deck and brainstormed the user stories and product backlog.  The product owner assigned a business value to each user story and the team weighed in on the cost or estimated level of effort to produce each user story.  We calculated the amount of points we thought we could produce based on past team velocity and committed to a number of User Stories.
  
@@ -74,6 +82,8 @@ Our design actually started with Balsamiq wireframes.  Those wireframes included
 
 During our design, we were conscious of colors and color contrast to minimize accessibilty risk and remain Section 508 compliant.  We also avoided design techniques that might have caused problems with cross-browser compatibility and responsiveness.
 
+Our style guide is located on GitHub at https://github.com/inqbation/visualfda/blob/master/style-guide.jpg 
+
 ## Development
 
 - [x] Created responsive prototype for multiple devices
@@ -83,7 +93,17 @@ During our design, we were conscious of colors and color contrast to minimize ac
 - [x] Defaulted to open
 - [x] Work in the open
 
-As open source software advocates; it was an easy decision to default to open, select a modern technology stack, deploy in a flexible hosting environment, and automate testing and deployments.  We were completely at home using AngularJS, jQuery, Django, Bower, Gulp, Karma, Wrench, Heroku, Travis CI, cAdvisor, and Sass.
+As open source software advocates; it was an easy decision to default to open, select a modern technology stack, deploy in a flexible hosting environment, and automate testing and deployments.  We were completely at home using: 
+
+* AngularJS
+* jQuery
+* Django
+* Gulp
+* Heroku
+* Travis CI
+* Sass
+ 
+Our complete list of technologies is located here: https://github.com/inqbation/visualfda/blob/master/technologies.md
 
 ## Quality Assurance 
 
