@@ -16,15 +16,15 @@ This prototype allows people to see potential reactions to drugs so they can tak
 
 Following the USDS Playbook, we brought in an experienced, multidisciplinary team and assigned a personally accountable leader.  Our agile delivery services team included:
  
-1. **Product Manager**, Blake
-2. **Technical Architect**, Luis
-3. **Interaction Designer**, Jenny
-4. **Content Strategist**, Shannon
-5. **Visual Designer**, Michael
-6. **Frontend Developer**, Cesar, Pipe
-7. **Backend Developer**, Sebastian
-8. **DevOps Engineer**, Andres
-9. **Security Engineer**, Felipe
+1. **Product Manager**, Blake (CSM, MS Information Systems, 20 years' experience)
+2. **Technical Architect**, Luis (CSM, BS Computer Science, 10 years' experience)
+3. **Interaction Designer**, Jenny (BS Interactive Design, 3 years' experience)
+4. **Content Strategist**, Shannon (BA, 5 years' experience)
+5. **Visual Designer**, Michael (BA, 10 years' experience)
+6. **Frontend Developer**, Cesar (BS 5 years'experience), Pipe (BS 3 years' experience)
+7. **Backend Developer**, Sebastian (BS 10 years' experience)
+8. **DevOps Engineer**, Andres (BS 10 years' experience)
+9. **Security Engineer**, Felipe (BS 15 years' experience)
 
 ## Human Centered Design
 
