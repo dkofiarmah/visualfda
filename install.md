@@ -50,3 +50,6 @@ docker build -t visualfda .
 docker run -d -p 3000:3000 visualfda
 // The application should be running at http://localhost:3000
 ```
+
+## Backend Installation
+For backend installation please follow these instructions. [instructions](https://github.com/inqbation/fdadrugnames/blob/master/install.md)
