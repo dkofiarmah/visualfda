@@ -7,6 +7,7 @@ GSA Holder | inQbation (dba Agileana)
 GSA Schedule | GS-35F-395BA
 Contact | Blake Newman
 Email | Blake.Newman@inQbation.com 
+Size | Small business
 Phone | 703.999.1232
 Prototype URL | http://www.agileana.com
 Installation | [instructions]
@@ -80,7 +81,7 @@ Our design actually started with Balsamiq wireframes.  Those wireframes included
 
 During our design, we were conscious of colors and color contrast to minimize accessibilty risk and remain Section 508 compliant.  We also avoided design techniques that might have caused problems with cross-browser compatibility and responsiveness.
 
-Our style guide is located on GitHub at https://github.com/inqbation/visualfda/blob/master/style-guide.jpg 
+[Style guide and designs](https://github.com/inqbation/visualfda/tree/master/design)
 
 ## Development
 
@@ -101,7 +102,7 @@ As open source software advocates; it was an easy decision to default to open, s
 * Travis CI
 * Sass
  
-Our complete list of technologies (and versions) is located here: https://github.com/inqbation/visualfda/blob/master/technologies.md
+[Complete list of technologies used](https://github.com/inqbation/visualfda/blob/master/technologies.md)
 
 To ensure cross-browser compatibility, we avoided things that we know are problematic with older browsers and beta browsers.  We also tested thoroughly against Chrome, Internet Explorer, Firefox, and Safari using matrix testing across Windows, Mac, iPhone, iPad, and Android devices.  We needed to make some small adjustments on the iPhone but, generally speaking, the prototype is fully responsive, cross-browser compliant, and accessible across most any kind of device somebody would like use.
 
@@ -130,4 +131,4 @@ IaaS, PaaS | We used Amazon S3 and Heroku
 
 ## About inQbation (dba Agileana)
 
-inQbation was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "Agileana: Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like www.Data.gov, www.USAspending.gov, www.RestoreTheGulf.gov, and www.CIES.org.  
+[inQbation](http://www.inqbation.com) was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "[Agileana](https://www.agileana.com): Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like [Data.gov](http://www.Data.gov), [USASpending.gov](http://www.USAspending.gov), [RestoreTheGulf.gov](http://www.RestoreTheGulf.gov), and [CIES.org](http://www.CIES.org).  
