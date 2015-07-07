@@ -9,7 +9,7 @@ Contact | Blake Newman
 Email | Blake.Newman@inQbation.com 
 Size | Small business
 Phone | 703.999.1232
-Prototype URL | http://www.agileana.com
+Prototype URL | [VisualFDA.HerokuApp.com](http://visualfda.herokuapp.com/#/)
 Installation | [instructions]
 
 ##Team
@@ -131,4 +131,4 @@ IaaS, PaaS | We used Amazon S3 and Heroku
 
 ## About inQbation (dba Agileana)
 
-[inQbation](http://www.inqbation.com) was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "[Agileana](https://www.agileana.com): Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like [Data.gov](http://www.Data.gov), [USASpending.gov](http://www.USAspending.gov), [RestoreTheGulf.gov](http://www.RestoreTheGulf.gov), and [CIES.org](http://www.CIES.org).  
+[inQbation](http://www.inqbation.com) was founded in 2007 with a mission to leverage Lean Startup and open source technologies to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC in 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "[Agileana](https://www.agileana.com): Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like [Data.gov](http://www.Data.gov), [USASpending.gov](http://www.USAspending.gov), [RestoreTheGulf.gov](http://www.RestoreTheGulf.gov), and [CIES.org](http://www.CIES.org).  
