@@ -5,7 +5,7 @@
   angular
     .module('fdaAppPrototype')
       .constant('searchSettings', {
-        baseURL: '//apisideeffects.agileana.com/',
+        baseURL: 'https://apisideeffects.agileana.com/',
         apiPath: '/api',
         resource: {
           drug: {
