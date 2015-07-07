@@ -109,7 +109,6 @@ To ensure cross-browser compatibility, we avoided things that we know are proble
 ## Quality Assurance 
 
 - [x] Wrote unit tests for their code
-- [x] Setup or used configuration management
 - [x] Automated testing and deployments
 
 We set up the continuous integration and continuous deployment part using Travis and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
@@ -117,6 +116,7 @@ We set up the continuous integration and continuous deployment part using Travis
 
 - [x] Setup or used continuous monitoring
 - [x] Deploy their software in a container
+- [x] Setup or used configuration management
 - [x] Provided documentation to install and run prototype machine
 - [x] Deployed in a flexible hosting environment
 - [x] Managed security through reusable processes
@@ -128,6 +128,7 @@ Continous monitoring | NewRelic, Google Analytics
 Security | Set up https using wildcard SSL certificate
 Container | Docker
 IaaS, PaaS | We used Amazon S3 and Heroku
+Configuration management | [Github](https://github.com/inqbation/visualfda)
 
 ## About inQbation (dba Agileana)
 
