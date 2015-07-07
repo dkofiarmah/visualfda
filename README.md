@@ -42,7 +42,7 @@ Our agile delivery services team included:
 - [x] Addressed the whole experience from start to finish
 - [x] Made it simple and intuitive
 
-The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
+The strategy was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
 
 On Father’s Day weekend, everybody took this opportunity to interview mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
  
