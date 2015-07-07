@@ -19,11 +19,11 @@ Installation | [instructions](https://github.com/inqbation/visualfda/blob/master
 - [x] Assembled a multidisciplinary and collaborative team
 - [x] Brought in an experienced team
 
-Following the USDS Playbook, we brought in an experienced, multidisciplinary team and assigned a personally accountable leader (Blake Newman).  
+Following the USDS Playbook, we brought in an experienced, multidisciplinary team and assigned a personally accountable leader [Blake Newman](https://www.linkedin.com/in/blakenewman).  
 
 Our agile delivery services team included:
  
-1. **Product Manager**, Blake (CSM, MS Information Systems, 20 years' experience)
+1. **Product Manager**, [Blake](http://blakenewman.com/) (CSM, MS Information Systems, 20 years' experience)
 2. **Technical Architect**, Luis (CSM, BS Computer Science, 15 years' experience)
 3. **Interaction Designer**, Jenny (BS Interactive Design, 3 years' experience)
 4. **Content Strategist**, Shannon (BA, 5 years' experience)
