@@ -48,4 +48,5 @@ docker build -t visualfda .
 * Run docker:
 ```
 docker run -d -p 3000:3000 visualfda
+// The application should be running at http://localhost:3000
 ```
