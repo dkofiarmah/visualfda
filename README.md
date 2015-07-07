@@ -10,7 +10,7 @@ Email | Blake.Newman@inQbation.com
 Size | Small business
 Phone | 703.999.1232
 Prototype URL | [SideEffects.Agileana.com](https://sideeffects.agileana.com/#/)
-Installation | [instructions]
+Installation | [instructions](https://github.com/inqbation/visualfda/blob/master/install.md)
 
 ##Team
 
@@ -27,9 +27,8 @@ Following the USDS Playbook, we brought in an experienced, multidisciplinary tea
 5. **Visual Designer**, Michael (BA, 10 years' experience)
 6. **Frontend Developer**, Cesar (BS 5 years'experience)
 7. **Frontend Developer**, Pipe (BS 3 years' experience)
-7. **Backend Developer**, Sebastian (BS 10 years' experience)
-8. **DevOps Engineer**, Andres (BS 10 years' experience)
-9. **Security Engineer**, Felipe (BS 15 years' experience)
+8. **Backend Developer**, Felipe (BS 15 years' experience)
+9. **DevOps Engineer**, Andres (BS 10 years' experience)
 
 ## Human Centered Design
 
@@ -131,9 +130,6 @@ Security | Set up https using wildcard SSL certificate
 Container | Docker
 IaaS, PaaS | We used Amazon S3 and Heroku
 Configuration management | [Github](https://github.com/inqbation/visualfda)
-
-## Installation Instructions
-The installation instructions are located here: https://github.com/inqbation/visualfda/blob/master/install.md
 
 ## About inQbation (dba Agileana)
 
