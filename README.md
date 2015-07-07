@@ -1,6 +1,6 @@
 # Pool Three Submission
 
-This prototype allows people to see potential reactions to drugs so they can take necessary precautions.
+Prototype allows people to see potential reactions to drugs so they can take precautions.
 
 GSA Holder | inQbation (dba Agileana) 
 --------------------------- | --------------------------
@@ -54,8 +54,6 @@ From a usability perspective, we also wanted to help people spell drugs correctl
 
 **Secondary user goal:** As a patient or patient advocate seeking to find the effects of a drug, I want to autocomplete (autocorrect) my search query so I can avoid false negative search results.
  
-Finally, we wanted to produce a simple, intuitive, and accessible (Section 508 compliant) chart that allowed people to understand either visually or with assistive technology.  
-
 Incorporating Human Centered Design into the prototype development encouraged the involvement of potential end users, which led to the creation of five diverse personas to represent the needs and expectations of the different types of end users taken into consideration during the design process. This approach combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for a wide range of users (abled and disabled, expert and non-expert) to intuitively search and quickly view the top adverse drug reactions in the form of a clear and concise graph. To achieve this goal, we decided that a simple, usable, and accessible interface was essential. To ensure that all of these requirements were met, we employed the following  HCD techniques: Persona Creation, Heuristic Evaluation, Participatory Design, and Usability Testing.
 
 [Full narrative and evidence on our UCD approach](https://github.com/inqbation/visualfda/blob/master/docs/UserCenteredDesignNarrative.pdf)
@@ -75,6 +73,8 @@ For this prototype, we held an initial kick-off meeting where we produced an inc
 Our scrum master created the kanban board using JIRA and, as a team, we broke down the user stories into tasks.  We also grouped the user stories into epic groups.  We had decided to perform daily sprints and leverage Kanban so as soon as somebody was done with a task, they could just grab whatever next task needed to be done and proceed without delay.
  
 From an iterative perspective, we started out simply by designing paper prototypes and wire frames to get early feedback on the user interface design and layout.  Based on that feedback, we simplified and focused on the absolute minimum viable product.  Then, we created a skeletal prototype without design or presentation layers simply to determine if we were producing desired results from the dataset and API.  We discovered significant false positives and false negatives and troubleshooted the problems with our queries until we were confident with the results.  Then, we iteratively improved on design and usability.
+
+[Jira screen shots](https://github.com/inqbation/visualfda/tree/master/jira)
 
 ## Design
 
@@ -141,7 +141,7 @@ Requirement | Approach
 Continous monitoring | NewRelic, Google Analytics
 Security | Set up https using wildcard SSL certificate
 Container | Docker
-IaaS, PaaS | We used Amazon S3 and Heroku
+IaaS, PaaS | We used [Amazon S3](http://gsa18f.s3-website-us-east-1.amazonaws.com/#/) and [Heroku](http://visualfda.herokuapp.com/#/)
 Configuration management | [Github](https://github.com/inqbation/visualfda)
 
 ## About inQbation (dba Agileana)
