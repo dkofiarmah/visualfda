@@ -9,7 +9,7 @@ Contact | Blake Newman
 Email | Blake.Newman@inQbation.com 
 Size | Small business
 Phone | 703.999.1232
-Prototype URL | [VisualFDA.HerokuApp.com](http://visualfda.herokuapp.com/#/)
+Prototype URL | [SideEffects.Agileana.com](https://sideeffects.agileana.com/#/)
 Installation | [instructions]
 
 ##Team
