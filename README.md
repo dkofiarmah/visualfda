@@ -1,10 +1,10 @@
 # Pool Three Submission
-by inQbation (dba Agileana) GSA Schedule: GS-35F-395BA
 
-Important Links | URL
---------------- | ---
+inQbation (dba Agileana) | GSA Schedule: GS-35F-395BA
+--------------------------- | --------------------------
+Blake.Newman@inQbation.com | 703.999.1232
 URL to prototype | http://www.agileana.com
-Installation | instructions
+Installation | [instructions]
 
 This prototype allows people to see potential reactions to drugs so they can take necessary precautions.
 
@@ -132,7 +132,4 @@ IaaS, PaaS | We used Amazon S3 and Heroku
 
 ## About inQbation (dba Agileana)
 
-inQbation was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "Agileana: Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like Data.gov, USAspending.gov, RestoreTheGulf.gov, and CIES.org.  
-
-
-
+inQbation was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "Agileana: Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like www.Data.gov, www.USAspending.gov, www.RestoreTheGulf.gov, and www.CIES.org.  
