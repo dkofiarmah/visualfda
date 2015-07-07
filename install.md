@@ -4,7 +4,7 @@
  * git ([git](https://git-scm.com/))
  * node.js ([node.js](https://nodejs.org/))
 
-## Install Application
+## Install the Application
 
  * Clone this project:
 ```
