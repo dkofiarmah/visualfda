@@ -1,12 +1,15 @@
 # Pool Three Submission
 
-inQbation (dba Agileana) | GSA Schedule: GS-35F-395BA
---------------------------- | --------------------------
-Blake.Newman@inQbation.com | 703.999.1232
-URL to prototype | http://www.agileana.com
-Installation | [instructions]
-
 This prototype allows people to see potential reactions to drugs so they can take necessary precautions.
+
+GSA Holder | inQbation (dba Agileana) 
+--------------------------- | --------------------------
+GSA Schedule | GS-35F-395BA
+Contact | Blake Newman
+Email | Blake.Newman@inQbation.com 
+Phone | 703.999.1232
+Prototype URL | http://www.agileana.com
+Installation | [instructions]
 
 ##Team
 
