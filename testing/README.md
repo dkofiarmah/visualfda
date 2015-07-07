@@ -1,4 +1,4 @@
-### Testing
+# Testing
 We are using travis for testing and continuos integration. https://travis-ci.org/inqbation/visualfda.
 
 
