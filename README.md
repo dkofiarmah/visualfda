@@ -42,7 +42,7 @@ Following the USDS Playbook, we brought in an experienced, multidisciplinary tea
 
 The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
 
-On Father’s Day weekend, everybody took this opportunity to survey mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
+On Father’s Day weekend, everybody took this opportunity to interview mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
  
 The answer came from 62 year old Theresa Cullen, a doctor who remembers hearing concerns from her patients about the side effects of drugs, fine print on drug labels, and fast talk at the end of drug commercials.  We honed in on this idea and polled multiple people to verify demand.  Consequently, we decided to produce a clean and simple tool to discover the effects and reactions of taking particular drugs.  
 
@@ -55,6 +55,8 @@ From a usability perspective, we also wanted to help people spell drugs correctl
 Finally, we wanted to produce a simple, intuitive, and accessible (Section 508 compliant) chart that allowed people to understand either visually or with assistive technology.  
 
 Incorporating User Centered Design into prototype development we initially started by conducting a small focus group consisting of five diverse individuals. This focus group combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for all users (including non-medically savvy consumers) to quickly and easily search and view the top adverse drug reactions. To achieve this goal we decided that a simple, usable, and accessible interface was necessary. To ensure that all of these were met we employed the following user centered design techniques: participatory design, usability testing, and heuristic evaluation.
+
+[Full narrative and evidence on our UCD approach](https://github.com/inqbation/visualfda/blob/master/docs/UserCenteredDesignNarrative.pdf)
 
 ## Agile Process
 
@@ -109,7 +111,6 @@ To ensure cross-browser compatibility, we avoided things that we know are proble
 ## Quality Assurance 
 
 - [x] Wrote unit tests for their code
-- [x] Setup or used configuration management
 - [x] Automated testing and deployments
 
 We set up the continuous integration and continuous deployment part using Travis and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
@@ -117,6 +118,7 @@ We set up the continuous integration and continuous deployment part using Travis
 
 - [x] Setup or used continuous monitoring
 - [x] Deploy their software in a container
+- [x] Setup or used configuration management
 - [x] Provided documentation to install and run prototype machine
 - [x] Deployed in a flexible hosting environment
 - [x] Managed security through reusable processes
@@ -128,6 +130,7 @@ Continous monitoring | NewRelic, Google Analytics
 Security | Set up https using wildcard SSL certificate
 Container | Docker
 IaaS, PaaS | We used Amazon S3 and Heroku
+Configuration management | [Github](https://github.com/inqbation/visualfda)
 
 ## About inQbation (dba Agileana)
 
