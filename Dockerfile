@@ -1,56 +1,24 @@
-FROM ubuntu:14.04
+FROM heroku/cedar:14
 
-MAINTAINER Cesar Pino <cesar.pino@inqbation.com>
+RUN useradd -d /app -m app
+USER app
+WORKDIR /app
 
-# Installing NVM and node
-# Replace shell with bash so we can source files
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+ENV HOME /app
+ENV NODE_ENGINE 0.12.6
+ENV PORT 3000
 
-# Set debconf to run non-interactively
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+RUN mkdir -p /app/heroku/node
+RUN mkdir -p /app/src
+RUN curl -s https://s3pository.heroku.com/node/v$NODE_ENGINE/node-v$NODE_ENGINE-linux-x64.tar.gz | tar --strip-components=1 -xz -C /app/heroku/node
+ENV PATH /app/heroku/node/bin:$PATH
 
-# Install base dependencies
-RUN apt-get update && apt-get install -y -q --no-install-recommends \
-        build-essential \
-        curl \
-        git \
-        python \
-        man \
-        ca-certificates \
-        libssl-dev
+RUN mkdir -p /app/.profile.d
+RUN echo "export PATH=\"/app/heroku/node/bin:/app/bin:/app/src/node_modules/.bin:\$PATH\"" > /app/.profile.d/nodejs.sh
+RUN echo "cd /app/src" >> /app/.profile.d/nodejs.sh
+WORKDIR /app/src
 
-USER root
-ENV HOME /root
-ENV NODE_VER v0.12.5
+EXPOSE 3000
 
-# Install nvm with node and npm
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash \
-    && source $HOME/.nvm/nvm.sh \
-    && echo '. ~/.nvm/nvm.sh' >> $HOME/.profile \
-    && nvm install $NODE_VER \
-    && nvm alias default $NODE_VER \
-    && nvm use default
-
-# Adding npm and node to PATH
-ENV PATH $PATH:/root/.nvm/versions/node/$NODE_VER/bin
-
-RUN npm install bower gulp -g
-
-# installing phanthonjs
-ENV PHANTOM_JS_VERSION 1.9.7-linux-x86_64
-RUN apt-get install -y bzip2 libfreetype6 libfontconfig
-RUN curl -sSL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOM_JS_VERSION.tar.bz2 | tar xjC /
-RUN ln -s phantomjs-$PHANTOM_JS_VERSION /phantomjs
-
-# Adding source files
-ADD ./package.json /home/
-ADD ./bower.json /home/
-ADD ./.bowerrc /home/
-RUN cd /home; npm install && bower install --allow-root
-ADD . /home
-
-# Define working directory.
-WORKDIR /home
-
-# Expose gulp ports
-EXPOSE 3000 3001 9876
+ONBUILD COPY . /app/src
+ONBUILD RUN npm install

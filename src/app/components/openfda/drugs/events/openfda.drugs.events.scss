@@ -28,10 +28,19 @@
     padding: 0.5em 0;
 }
 .results__title__drug-name{
-    color: $blue;
+    color: $light-blue;
 }
 
 .results__searching-label{
     font-size: $h1;
     padding: 20vh 0 60vh 0;
+}
+
+.results__table td:nth-child(2){
+-ms-word-break: break-all;
+    word-break: break-all;
+     // Non standard for webkit
+    word-break: break-word;
+
+    hyphens: auto;
 }
