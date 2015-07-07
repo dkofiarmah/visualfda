@@ -141,7 +141,7 @@ Requirement | Approach
 Continous monitoring | NewRelic, Google Analytics
 Security | Set up https using wildcard SSL certificate
 Container | Docker
-IaaS, PaaS | We used [Amazon S3](http://gsa18f.s3-website-us-east-1.amazonaws.com/#/) and [Heroku](http://visualfda.herokuapp.com/#/)
+IaaS, PaaS | We used Amazon S3 and [Heroku](http://visualfda.herokuapp.com/#/)
 Configuration management | [Github](https://github.com/inqbation/visualfda)
 
 ## About inQbation (dba Agileana)
