@@ -10,6 +10,7 @@ Email | Blake.Newman@inQbation.com
 Size | Small business
 Phone | 703.999.1232
 Prototype URL | [SideEffects.Agileana.com](https://sideeffects.agileana.com/#/)
+Build Status | [![Build Status](https://travis-ci.org/inqbation/visualfda.svg?branch=master)](https://travis-ci.org/inqbation/visualfda)
 Installation | [instructions](https://github.com/inqbation/visualfda/blob/master/install.md)
 
 ##Team
@@ -18,7 +19,9 @@ Installation | [instructions](https://github.com/inqbation/visualfda/blob/master
 - [x] Assembled a multidisciplinary and collaborative team
 - [x] Brought in an experienced team
 
-Following the USDS Playbook, we brought in an experienced, multidisciplinary team and assigned a personally accountable leader.  Our agile delivery services team included:
+Following the USDS Playbook, we brought in an experienced, multidisciplinary team and assigned a personally accountable leader (Blake Newman).  
+
+Our agile delivery services team included:
  
 1. **Product Manager**, Blake (CSM, MS Information Systems, 20 years' experience)
 2. **Technical Architect**, Luis (CSM, BS Computer Science, 15 years' experience)
