@@ -53,7 +53,7 @@ From a usability perspective, we also wanted to help people spell drugs correctl
  
 Finally, we wanted to produce a simple, intuitive, and accessible (Section 508 compliant) chart that allowed people to understand either visually or with assistive technology.  
 
-Incorporating User Centered Design into prototype development we initially started by conducting a small focus group consisting of five diverse individuals. This focus group combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for all users (including non-medically savvy consumers) to quickly and easily search and view the top adverse drug reactions. To achieve this goal we decided that a simple, usable, and accessible interface was necessary. To ensure that all of these were met we employed the following user centered design techniques: participatory design, usability testing, and heuristic evaluation.
+Incorporating Human Centered Design into the prototype development encouraged the involvement of potential end users, which led to the creation of five diverse personas to represent the needs and expectations of the different types of end users taken into consideration during the design process. This approach combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for a wide range of users (abled and disabled, expert and non-expert) to intuitively search and quickly view the top adverse drug reactions in the form of a clear and concise graph. To achieve this goal, we decided that a simple, usable, and accessible interface was essential. To ensure that all of these requirements were met, we employed the following  HCD techniques: Persona Creation, Heuristic Evaluation, Participatory Design, and Usability Testing.
 
 [Full narrative and evidence on our UCD approach](https://github.com/inqbation/visualfda/blob/master/docs/UserCenteredDesignNarrative.pdf)
 
@@ -113,6 +113,7 @@ To ensure cross-browser compatibility, we avoided things that we know are proble
 - [x] Automated testing and deployments
 
 We set up the continuous integration and continuous deployment part using [Travis](https://travis-ci.org/inqbation/visualfda) and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
+
 For Section 508 (accessibility) testing, we used the following tools to identify issues:
 
 * [Total Validator Pro](http://www.totalvalidator.com/downloads/protool.html)
@@ -122,7 +123,6 @@ For Section 508 (accessibility) testing, we used the following tools to identify
 
 [Evidence of 508 compliance test results ](https://github.com/inqbation/visualfda/tree/master/508-compliance)
 
- 
 ## DevOps 
 
 - [x] Setup or used continuous monitoring
