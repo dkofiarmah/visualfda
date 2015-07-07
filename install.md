@@ -1,7 +1,11 @@
-Installation Instructions
-=========================
+# Installation Instructions
 
- * Install NodeJS
+## Prerequisites
+ * git ([git](https://git-scm.com/))
+ * node.js ([node.js](https://nodejs.org/))
+
+## Install Application
+
  * Clone this project:
 ```
 git clone git@github.com:inqbation/visualfda.git
@@ -26,8 +30,8 @@ gulp test
 gulp build
 ```
 
-Docker Installation
-===================
+## Docker Installation
+
 * Install Docker following these instruccions:
 ```
 https://docs.docker.com/installation/
@@ -40,4 +44,8 @@ cd visualfda
 * Create the docker image:
 ```
 docker build -t visualfda .
+```
+* Run docker:
+```
+docker run -d -p 3000:3000 visualfda
 ```

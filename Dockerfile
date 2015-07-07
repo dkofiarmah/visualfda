@@ -23,6 +23,7 @@ RUN useradd -d /app -m app
 USER app
 ENV HOME /app
 ENV NODE_VER v0.12.5
+ENV PORT 3000
 
 # Install nvm with node and npm
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash \
@@ -47,3 +48,5 @@ RUN npm install && bower install
 
 # Expose gulp ports
 EXPOSE 3000 3001 9876
+
+CMD ["npm", "start"]
