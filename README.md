@@ -7,8 +7,9 @@ GSA Holder | inQbation (dba Agileana)
 GSA Schedule | GS-35F-395BA
 Contact | Blake Newman
 Email | Blake.Newman@inQbation.com 
+Size | Small business
 Phone | 703.999.1232
-Prototype URL | http://www.agileana.com
+Prototype URL | [SideEffects.Agileana.com](https://sideeffects.agileana.com/#/)
 Installation | [instructions]
 
 ##Team
@@ -41,7 +42,7 @@ Following the USDS Playbook, we brought in an experienced, multidisciplinary tea
 
 The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
 
-On Father’s Day weekend, everybody took this opportunity to survey mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
+On Father’s Day weekend, everybody took this opportunity to interview mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
  
 The answer came from 62 year old Theresa Cullen, a doctor who remembers hearing concerns from her patients about the side effects of drugs, fine print on drug labels, and fast talk at the end of drug commercials.  We honed in on this idea and polled multiple people to verify demand.  Consequently, we decided to produce a clean and simple tool to discover the effects and reactions of taking particular drugs.  
 
@@ -54,6 +55,8 @@ From a usability perspective, we also wanted to help people spell drugs correctl
 Finally, we wanted to produce a simple, intuitive, and accessible (Section 508 compliant) chart that allowed people to understand either visually or with assistive technology.  
 
 Incorporating User Centered Design into prototype development we initially started by conducting a small focus group consisting of five diverse individuals. This focus group combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for all users (including non-medically savvy consumers) to quickly and easily search and view the top adverse drug reactions. To achieve this goal we decided that a simple, usable, and accessible interface was necessary. To ensure that all of these were met we employed the following user centered design techniques: participatory design, usability testing, and heuristic evaluation.
+
+[Full narrative and evidence on our UCD approach](https://github.com/inqbation/visualfda/blob/master/docs/UserCenteredDesignNarrative.pdf)
 
 ## Agile Process
 
@@ -80,7 +83,7 @@ Our design actually started with Balsamiq wireframes.  Those wireframes included
 
 During our design, we were conscious of colors and color contrast to minimize accessibilty risk and remain Section 508 compliant.  We also avoided design techniques that might have caused problems with cross-browser compatibility and responsiveness.
 
-Our style guide is located on GitHub at https://github.com/inqbation/visualfda/blob/master/style-guide.jpg 
+[Style guide and designs](https://github.com/inqbation/visualfda/tree/master/design)
 
 ## Development
 
@@ -101,14 +104,13 @@ As open source software advocates; it was an easy decision to default to open, s
 * Travis CI
 * Sass
  
-Our complete list of technologies (and versions) is located here: https://github.com/inqbation/visualfda/blob/master/technologies.md
+[Complete list of technologies used](https://github.com/inqbation/visualfda/blob/master/technologies.md)
 
 To ensure cross-browser compatibility, we avoided things that we know are problematic with older browsers and beta browsers.  We also tested thoroughly against Chrome, Internet Explorer, Firefox, and Safari using matrix testing across Windows, Mac, iPhone, iPad, and Android devices.  We needed to make some small adjustments on the iPhone but, generally speaking, the prototype is fully responsive, cross-browser compliant, and accessible across most any kind of device somebody would like use.
 
 ## Quality Assurance 
 
 - [x] Wrote unit tests for their code
-- [x] Setup or used configuration management
 - [x] Automated testing and deployments
 
 We set up the continuous integration and continuous deployment part using Travis and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
@@ -116,6 +118,7 @@ We set up the continuous integration and continuous deployment part using Travis
 
 - [x] Setup or used continuous monitoring
 - [x] Deploy their software in a container
+- [x] Setup or used configuration management
 - [x] Provided documentation to install and run prototype machine
 - [x] Deployed in a flexible hosting environment
 - [x] Managed security through reusable processes
@@ -127,10 +130,11 @@ Continous monitoring | NewRelic, Google Analytics
 Security | Set up https using wildcard SSL certificate
 Container | Docker
 IaaS, PaaS | We used Amazon S3 and Heroku
+Configuration management | [Github](https://github.com/inqbation/visualfda)
 
 ## Installation Instructions
 The installation instructions are located here: https://github.com/inqbation/visualfda/blob/master/install.md
 
 ## About inQbation (dba Agileana)
 
-inQbation was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "Agileana: Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like www.Data.gov, www.USAspending.gov, www.RestoreTheGulf.gov, and www.CIES.org.  
+[inQbation](http://www.inqbation.com) was founded in 2007 with a mission to leverage Lean Startup and open source technologies to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC in 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "[Agileana](https://www.agileana.com): Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like [Data.gov](http://www.Data.gov), [USASpending.gov](http://www.USAspending.gov), [RestoreTheGulf.gov](http://www.RestoreTheGulf.gov), and [CIES.org](http://www.CIES.org).  
