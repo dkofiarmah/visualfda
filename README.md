@@ -140,9 +140,9 @@ For Section 508 (accessibility) testing, we used the following tools to identify
 Requirement | Approach
 ----------- | --------
 Continous monitoring | NewRelic, Google Analytics
-Security | Set up https using wildcard SSL certificate
+Security | https wildcard SSL certificate
 Container | Docker
-IaaS, PaaS | We used Amazon S3 and [Heroku](http://visualfda.herokuapp.com/#/)
+IaaS, PaaS | [Heroku](http://visualfda.herokuapp.com/#/)
 Configuration management | [Github frontend](https://github.com/inqbation/visualfda)
 Drug names for autocorrect | [Github backend](https://github.com/inqbation/fdadrugnames)
 
