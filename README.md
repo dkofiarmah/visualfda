@@ -112,7 +112,14 @@ To ensure cross-browser compatibility, we avoided things that we know are proble
 - [x] Wrote unit tests for their code
 - [x] Automated testing and deployments
 
-We set up the continuous integration and continuous deployment part using Travis and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
+We set up the continuous integration and continuous deployment part using [Travis](https://travis-ci.org/inqbation/visualfda) and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
+For Section 508 (accessibility) testing, we used the following tools to identify issues:
+
+* [Total Validator Pro](http://www.totalvalidator.com/downloads/protool.html)
+* [WAVE toolbar](https://wave.webaim.org/toolbar/)
+* [JAWS 15](http://www.freedomscientific.com/downloads/jaws/jaws-downloads.asp)
+* [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastAnalyser)
+ 
 ## DevOps 
 
 - [x] Setup or used continuous monitoring
