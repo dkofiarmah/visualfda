@@ -20,7 +20,7 @@ Installation | [instructions]
 Following the USDS Playbook, we brought in an experienced, multidisciplinary team and assigned a personally accountable leader.  Our agile delivery services team included:
  
 1. **Product Manager**, Blake (CSM, MS Information Systems, 20 years' experience)
-2. **Technical Architect**, Luis (CSM, BS Computer Science, 10 years' experience)
+2. **Technical Architect**, Luis (CSM, BS Computer Science, 15 years' experience)
 3. **Interaction Designer**, Jenny (BS Interactive Design, 3 years' experience)
 4. **Content Strategist**, Shannon (BA, 5 years' experience)
 5. **Visual Designer**, Michael (BA, 10 years' experience)
@@ -38,25 +38,21 @@ Following the USDS Playbook, we brought in an experienced, multidisciplinary tea
 - [x] Addressed the whole experience from start to finish
 - [x] Made it simple and intuitive
 
-The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We wanted to practice Lean Startup by first listening to needs, understanding those needs, rapidly producing a prototype based on those needs, seeking feedback, and iterating based on that feedback.
+The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
 
-On Father’s Day weekend, everybody on the team took this opportunity to poll mothers, fathers, and grandparents about what bothers them about drugs and drug commercials that we could possibly glean from the datasets on Open.FDA.gov.
+On Father’s Day weekend, everybody took this opportunity to survey mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
  
-The answer came from 62 year old Theresa Cullen, a doctor who remembers hearing concerns from her patients about the side effects of drugs, fine print on drug labels, and fast talk at the end of drug commercials.  We honed in on this idea and polled multiple people from various demographics during that Father’s Day weekend.  In the end, we decided to produce a clean and simple tool to discover the effects and reactions of taking particular drugs.
- 
-The primary user story is: As a patient or patient advocate, I want to know the potential side effects of a drug so I can decide whether it may cause problems.  From a usability perspective, we also wanted to help people spell drugs correctly (which are not always easy to do) so we defined a secondary user story: As a patient or patient advocate seeking to find the effects of a drug, I want to autocomplete (autocorrect) my search query so I can avoid false negative search results.
+The answer came from 62 year old Theresa Cullen, a doctor who remembers hearing concerns from her patients about the side effects of drugs, fine print on drug labels, and fast talk at the end of drug commercials.  We honed in on this idea and polled multiple people to verify demand.  Consequently, we decided to produce a clean and simple tool to discover the effects and reactions of taking particular drugs.  
+
+**Primary user goal:** As a patient or patient advocate, I want to know the potential side effects of a drug so I can decide whether it may cause problems.  
+
+From a usability perspective, we also wanted to help people spell drugs correctly (which are not always easy to do)
+
+**Secondary user goal:** As a patient or patient advocate seeking to find the effects of a drug, I want to autocomplete (autocorrect) my search query so I can avoid false negative search results.
  
 Finally, we wanted to produce a simple, intuitive, and accessible (Section 508 compliant) chart that allowed people to understand either visually or with assistive technology.  
 
 Incorporating User Centered Design into prototype development we initially started by conducting a small focus group consisting of five diverse individuals. This focus group combined with an analysis of the information gathered against feasibility and viability led us to set the following goal for our prototype: Create a functional prototype accessible for all users (including non-medically savvy consumers) to quickly and easily search and view the top adverse drug reactions. To achieve this goal we decided that a simple, usable, and accessible interface was necessary. To ensure that all of these were met we employed the following user centered design techniques: participatory design, usability testing, and heuristic evaluation.
-
-As big fans of Steve Krug's "Don't Make Me Think" we put a big emphasis on making things simple and intuitive.  We helped people enter data correctly, coached them when they got something wrong, and rewarded them when they got something right.  Some of the techniques used included:
-
-* Brainstorming
-* Storyboarding
-* Paper Prototyping
-* Software Prototyping
-* Controlled Usability Testing
 
 ## Agile Process
 
@@ -72,8 +68,6 @@ For this prototype, we held an initial kick-off meeting where we produced an inc
  
 Our scrum master created the kanban board using JIRA and, as a team, we broke down the user stories into tasks.  We also grouped the user stories into epic groups.  We had decided to perform daily sprints and leverage Kanban so as soon as somebody was done with a task, they could just grab whatever next task needed to be done and proceed without delay.
  
-Given that we worked over Father’s Day and July 4th weekends, we did a lot of our work remotely and in a distributed environment, which was not ideal but it worked.  We leveraged Google Hangouts and Slack to facilitate collaboration, resolve issues, discuss problems, and overcome obstacles.  We also used Google Hangouts for pair programming when we got stuck on a particular problem or issue that needed multiple brains to resolve.
-
 From an iterative perspective, we started out simply by designing paper prototypes and wire frames to get early feedback on the user interface design and layout.  Based on that feedback, we simplified and focused on the absolute minimum viable product.  Then, we created a skeletal prototype without design or presentation layers simply to determine if we were producing desired results from the dataset and API.  We discovered significant false positives and false negatives and troubleshooted the problems with our queries until we were confident with the results.  Then, we iteratively improved on design and usability.
 
 ## Design
