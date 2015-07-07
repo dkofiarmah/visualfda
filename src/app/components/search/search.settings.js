@@ -9,7 +9,7 @@
         apiPath: '/api',
         resource: {
           drug: {
-            path: '/drugs',
+            path: '/drugs/',
           },
         }
       });
