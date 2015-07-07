@@ -7,7 +7,7 @@ GSA Holder | inQbation (dba Agileana)
 GSA Schedule | GS-35F-395BA
 Contact | Blake Newman
 Email | Blake.Newman@inQbation.com 
-Size | Small business
+Size | Small business, big heart
 Phone | 703.999.1232
 Prototype URL | [SideEffects.Agileana.com](https://sideeffects.agileana.com/#/)
 Build Status | [![Build Status](https://travis-ci.org/inqbation/visualfda.svg?branch=master)](https://travis-ci.org/inqbation/visualfda)
