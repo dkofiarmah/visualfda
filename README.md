@@ -128,6 +128,9 @@ Security | Set up https using wildcard SSL certificate
 Container | Docker
 IaaS, PaaS | We used Amazon S3 and Heroku
 
+## Installation Instructions
+The installation instructions are located here: https://github.com/inqbation/visualfda/blob/master/install.md
+
 ## About inQbation (dba Agileana)
 
 inQbation was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "Agileana: Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like www.Data.gov, www.USAspending.gov, www.RestoreTheGulf.gov, and www.CIES.org.  

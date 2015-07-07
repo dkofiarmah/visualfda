@@ -1,24 +1,49 @@
-FROM heroku/cedar:14
+FROM ubuntu:14.04
+
+MAINTAINER Cesar Pino <cesar.pino@inqbation.com>
+
+# Installing NVM and node
+# Replace shell with bash so we can source files
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+# Set debconf to run non-interactively
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+# Install base dependencies
+RUN apt-get update && apt-get install -y -q --no-install-recommends \
+        build-essential \
+        curl \
+        git \
+        python \
+        man \
+        ca-certificates \
+        libssl-dev
 
 RUN useradd -d /app -m app
 USER app
+ENV HOME /app
+ENV NODE_VER v0.12.5
+
+# Install nvm with node and npm
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash \
+    && source $HOME/.nvm/nvm.sh \
+    && echo '. ~/.nvm/nvm.sh' >> $HOME/.profile \
+    && nvm install $NODE_VER \
+    && nvm alias default $NODE_VER \
+    && nvm use default
+
+# Adding npm and node to PATH
+ENV PATH $PATH:/app/.nvm/versions/node/$NODE_VER/bin
+
+RUN npm install bower gulp -g
+
+# Adding source files
+ADD . /app/
+
+# Define working directory.
 WORKDIR /app
 
-ENV HOME /app
-ENV NODE_ENGINE 0.12.6
-ENV PORT 3000
+RUN npm install && bower install
 
-RUN mkdir -p /app/heroku/node
-RUN mkdir -p /app/src
-RUN curl -s https://s3pository.heroku.com/node/v$NODE_ENGINE/node-v$NODE_ENGINE-linux-x64.tar.gz | tar --strip-components=1 -xz -C /app/heroku/node
-ENV PATH /app/heroku/node/bin:$PATH
-
-RUN mkdir -p /app/.profile.d
-RUN echo "export PATH=\"/app/heroku/node/bin:/app/bin:/app/src/node_modules/.bin:\$PATH\"" > /app/.profile.d/nodejs.sh
-RUN echo "cd /app/src" >> /app/.profile.d/nodejs.sh
-WORKDIR /app/src
-
-EXPOSE 3000
-
-ONBUILD COPY . /app/src
-ONBUILD RUN npm install
+# Expose gulp ports
+EXPOSE 3000 3001 9876
