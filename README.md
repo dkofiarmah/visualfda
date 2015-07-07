@@ -103,7 +103,9 @@ As open source software advocates; it was an easy decision to default to open, s
 * Travis CI
 * Sass
  
-Our complete list of technologies is located here: https://github.com/inqbation/visualfda/blob/master/technologies.md
+Our complete list of technologies (and versions) is located here: https://github.com/inqbation/visualfda/blob/master/technologies.md
+
+To ensure cross-browser compatibility, we avoided things that we know are problematic with older browsers and beta browsers.  We also tested thoroughly against Chrome, Internet Explorer, Firefox, and Safari using matrix testing across Windows, Mac, iPhone, iPad, and Android devices.  We needed to make some small adjustments on the iPhone but, generally speaking, the prototype is fully responsive, cross-browser compliant, and accessible across most any kind of device somebody would like use.
 
 ## Quality Assurance 
 
@@ -111,6 +113,7 @@ Our complete list of technologies is located here: https://github.com/inqbation/
 - [x] Setup or used configuration management
 - [x] Automated testing and deployments
 
+We set up the continuous integration and continuous deployment part using Travis and Heroku so when somebody commits something to the master branch, it automatically tested by Travis and if all tests passes it automatically deploys the version to heroku. 
 ## DevOps 
 
 - [x] Setup or used continuous monitoring
@@ -119,5 +122,17 @@ Our complete list of technologies is located here: https://github.com/inqbation/
 - [x] Deployed in a flexible hosting environment
 - [x] Managed security through reusable processes
 - [x] Don't slow down delivery
+
+Requirement | Approach
+----------- | --------
+Continous monitoring | NewRelic, Google Analytics
+Security | Set up https using wildcard SSL certificate
+Container | Docker
+IaaS, PaaS | We used Amazon S3 and Heroku
+
+## About inQbation (dba Agileana)
+
+inQbation was founded in 2007 with a mission to leverage Lean Startup and open source to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "Agileana: Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like Data.gov, USAspending.gov, RestoreTheGulf.gov, and CIES.org.  
+
 
 
