@@ -8,7 +8,7 @@
 
  * Clone this project:
 ```
-git clone git@github.com:inqbation/visualfda.git
+git clone https://github.com/inqbation/visualfda.git
 cd visualfda
 ```
  * Install all dependencies:
@@ -38,7 +38,7 @@ https://docs.docker.com/installation/
 ```
 * Clone this repository:
 ```
-git clone git@github.com:inqbation/visualfda.git
+git clone https://github.com/inqbation/visualfda.git
 cd visualfda
 ```
 * Create the docker image:
