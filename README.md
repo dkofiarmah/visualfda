@@ -42,7 +42,7 @@ Our agile delivery services team included:
 - [x] Addressed the whole experience from start to finish
 - [x] Made it simple and intuitive
 
-The goal was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
+The strategy was to produce a Minimum Viable Product (MVP) based on verified demand as it related to datasets from Open.FDA.gov.  We practiced Lean Startup by first listening and understanding to needs, rapidly producing a prototype, and iterating based on feedback.
 
 On Father’s Day weekend, everybody took this opportunity to interview mothers, fathers, and grandparents about what bothers them about drug commercials that we could glean from the OpenFDA datasets. 
  
@@ -123,8 +123,9 @@ For Section 508 (accessibility) testing, we used the following tools to identify
 * [WAVE toolbar](https://wave.webaim.org/toolbar/)
 * [JAWS 15](http://www.freedomscientific.com/downloads/jaws/jaws-downloads.asp)
 * [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastAnalyser)
-
-[Evidence of 508 compliance test results ](https://github.com/inqbation/visualfda/tree/master/508-compliance)
+* [Evidence of 508 compliance test results ](https://github.com/inqbation/visualfda/tree/master/508-compliance)
+* [508 tests with screen readers](https://vimeo.com/132783015)
+* [508 tests for search results](https://vimeo.com/132784220)
 
 ## DevOps 
 
@@ -139,11 +140,12 @@ For Section 508 (accessibility) testing, we used the following tools to identify
 Requirement | Approach
 ----------- | --------
 Continous monitoring | NewRelic, Google Analytics
-Security | Set up https using wildcard SSL certificate
+Security | https wildcard SSL certificate
 Container | Docker
-IaaS, PaaS | We used Amazon S3 and [Heroku](http://visualfda.herokuapp.com/#/)
-Configuration management | [Github](https://github.com/inqbation/visualfda)
+IaaS, PaaS | [Heroku](http://visualfda.herokuapp.com/#/)
+Configuration management | [Github frontend](https://github.com/inqbation/visualfda)
+Drug names for autocorrect | [Github backend](https://github.com/inqbation/fdadrugnames)
 
 ## About inQbation (dba Agileana)
 
-[inQbation](http://www.inqbation.com) was founded in 2007 with a mission to leverage Lean Startup and open source technologies to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC in 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "[Agileana](https://www.agileana.com): Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, DoD, DHS, State Department, Forest Service, and our teaming partners to design, develop, and deploy sites like [Data.gov](http://www.Data.gov), [USASpending.gov](http://www.USAspending.gov), [RestoreTheGulf.gov](http://www.RestoreTheGulf.gov), and [CIES.org](http://www.CIES.org).  
+[inQbation](http://www.inqbation.com) was founded in 2007 with a mission to leverage Lean Startup and open source technologies to help startups get started on bootstrap budgets.  Inspired by the Tech President, we relocated to the Washington DC in 2009 to help government agencies do more with less.  In 2014, we rebranded the company as "[Agileana](https://www.agileana.com): Lean, Agile, Web Development".  We have worked with GSA, OMB, NASA, State Department, Forest Service, and teaming partners to design, develop, and deploy sites like [Data.gov](http://www.Data.gov), [USASpending.gov](http://www.USAspending.gov), [RestoreTheGulf.gov](http://www.RestoreTheGulf.gov), and [CIES.org](http://www.CIES.org).  
