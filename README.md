@@ -125,6 +125,8 @@ For Section 508 (accessibility) testing, we used the following tools to identify
 * [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastAnalyser)
 
 [Evidence of 508 compliance test results ](https://github.com/inqbation/visualfda/tree/master/508-compliance)
+[508 compliance tests with screen readers](https://vimeo.com/132783015)
+[508 compliant for search results](https://vimeo.com/132784220)
 
 ## DevOps 
 
